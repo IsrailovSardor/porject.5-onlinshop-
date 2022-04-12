@@ -1,0 +1,286 @@
+{
+  "bestseller": [
+    {
+      "img": "/img/best1.png",
+      "img1": "/img/best2.png",
+      "img2": "/img/best3.png",
+      "img4": "/img/best4.png",
+      "img5": "/img/best5.png",
+      "img6": "/img/best6.png",
+      "img7": "/img/best7.png",
+      "img8": "/img/best8.png",
+      "title": "Вечернее платье",
+      "sell": "1365р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": 1,
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+      "id": 1
+    },
+    {
+      "img": "/img/best2.png",
+      "img1": "/img/best1.png",
+      "img2": "/img/best8.png",
+      "img4": "/img/best7.png",
+      "img5": "/img/best6.png",
+      "img6": "/img/best5.png",
+      "img7": "/img/best4.png",
+      "img8": "/img/best3.png",
+      "title": "Вечернее платье",
+      "sell": "1360р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "art": "Платье PL984/dakota",
+      "discount": 0,
+      "id": 2
+    },
+    {
+      "img": "/img/best3.png",
+      "img1": "/img/best2.png",
+      "img2": "/img/best1.png",
+      "img4": "/img/best8.png",
+      "img5": "/img/best7.png",
+      "img6": "/img/best6.png",
+      "img7": "/img/best5.png",
+      "img8": "/img/best4.png",
+      "title": "Вечернее платье",
+      "art": "Платье PL984/dakota",
+      "sell": "1360р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": 0,
+      "id": 3
+    },
+    {
+      "img": "/img/best4.png",
+      "img1": "/img/best3.png",
+      "img2": "/img/best2.png",
+      "img4": "/img/best1.png",
+      "img5": "/img/best8.png",
+      "img6": "/img/best7.png",
+      "img7": "/img/best6.png",
+      "img8": "/img/best5.png",
+      "title": "Вечернее платье",
+      "art": "Платье PL984/dakota",
+      "sell": "1360р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": "0",
+      "id": 4
+    },
+    {
+      "img": "/img/best5.png",
+      "img1": "/img/best4.png",
+      "img2": "/img/best3.png",
+      "img4": "/img/best2.png",
+      "img5": "/img/best1.png",
+      "img6": "/img/best8.png",
+      "img7": "/img/best7.png",
+      "img8": "/img/best6.png",
+      "title": "Вечернее платье",
+      "art": "Платье PL984/dakota",
+      "sell": "1560р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": 1,
+      "id": 5
+    },
+    {
+      "img": "/img/best6.png",
+      "img1": "/img/best7.png",
+      "img2": "/img/best8.png",
+      "img4": "/img/best1.png",
+      "img5": "/img/best2.png",
+      "img6": "/img/best3.png",
+      "img7": "/img/best4.png",
+      "img8": "/img/best5.png",
+      "title": "Вечернее платье",
+      "art": "Платье PL984/dakota",
+      "sell": "1360р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": 0,
+      "id": 6
+    },
+    {
+      "img": "/img/best7.png",
+      "img1": "/img/best8.png",
+      "img2": "/img/best1.png",
+      "img4": "/img/best2.png",
+      "img5": "/img/best3.png",
+      "img6": "/img/best4.png",
+      "img7": "/img/best5.png",
+      "img8": "/img/best6.png",
+      "title": "Вечернее платье",
+      "art": "Платье PL984/dakota",
+      "sell": "1360р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": 0,
+      "id": 7
+    },
+    {
+      "img": "/img/best8.png",
+      "img1": "/img/best7.png",
+      "img2": "/img/best6.png",
+      "img4": "/img/best5.png",
+      "img5": "/img/best4.png",
+      "img6": "/img/best3.png",
+      "img7": "/img/best2.png",
+      "img8": "/img/best1.png",
+      "title": "Вечернее платье",
+      "art": "Платье PL984/dakota",
+      "sell": "1560р",
+      "sellNews": "2360р",
+      "size": "42-50",
+      "discount": 1,
+      "id": 8
+    }
+  ],
+  "news": [
+    {
+      "img": "/img/news1.png",
+      "img1": "/img/news2.png",
+      "img2": "/img/news3.png",
+      "title": "Вечернее платье",
+      "sell": "1365р",
+      "sellNews": "960р",
+      "size": "42-50",
+      "id": 1
+    },
+    {
+      "img": "/img/news2.png",
+      "img1": "/img/news4.png",
+      "img2": "/img/news3.png",
+      "title": "Вечернее платье",
+      "sell": "1360р",
+      "sellNews": "960р",
+      "size": "42-50",
+      "id": 2
+    },
+    {
+      "img": "/img/news3.png",
+      "img1": "/img/news2.png",
+      "img2": "/img/news1.png",
+      "title": "Вечернее платье",
+      "sell": "1360р",
+      "sellNews": "960р",
+      "size": "42-50",
+      "id": 3
+    },
+    {
+      "img": "/img/news4.png",
+      "img1": "/img/news1.png",
+      "img2": "/img/news3.png",
+      "title": "Вечернее платье",
+      "sell": "1360р",
+      "sellNews": "960р",
+      "size": "42-50",
+      "id": 4
+    },
+    {
+      "img": "/img/news1.png",
+      "img1": "/img/news2.png",
+      "img2": "/img/news3.png",
+      "title": "Вечернее платье",
+      "sell": "1365р",
+      "sellNews": "960р",
+      "size": "42-50",
+      "id": 5
+    }
+  ],
+  "collection": [
+    {
+      "img": "./img/colec1.png",
+      "title": "Повседневная одежда",
+      "id": 1
+    },
+    {
+      "img": "./img/colec5.png",
+      "title": "Одежда на пляж",
+      "id": 2
+    },
+    {
+      "img": "./img/colec3.png",
+      "title": "Юбки",
+      "id": 3
+    },
+    {
+      "img": "./img/colec4.png",
+      "title": "Джинсы",
+      "id": 4
+    },
+    {
+      "img": "./img/colec4.png",
+      "title": "Повседневная одежда",
+      "id": 1
+    },
+    {
+      "img": "./img/colec6.png",
+      "title": "Одежда на пляж",
+      "id": 2
+    },
+    {
+      "img": "./img/colec2.png",
+      "title": "Юбки",
+      "id": 3
+    },
+    {
+      "img": "./img/colec1.png",
+      "title": "Джинсы",
+      "id": 4
+    }
+  ],
+  "chat": [
+    {
+      "userName": "Sardor",
+      "number": "+996502772777",
+      "id": 1
+    },
+    {
+      "userName": "",
+      "number": "",
+      "id": 2
+    },
+    {
+      "userName": "",
+      "number": "",
+      "id": 3
+    },
+    {
+      "userName": "",
+      "number": "",
+      "id": 4
+    },
+    {
+      "userName": "",
+      "number": "",
+      "id": 5
+    },
+    {
+      "userName": "",
+      "number": "",
+      "id": 6
+    },
+    {
+      "userName": "",
+      "number": "",
+      "id": 7
+    }
+  ],
+  "newspost": [
+    {
+      "img": "/img/newspost.png",
+      "title": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
+      "id": 1
+    },
+    {
+      "img": "/img/newspost2.png",
+      "title": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
+      "id": 2
+    }
+  ]
+}

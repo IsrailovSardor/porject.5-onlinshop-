@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.footer_container {
+    width: 100%;
+    height: 235px;
+    background-color: #1D1D1B;
+    padding: 48px 167px 24px 99px;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+}
+
+.footer_block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 114px;
+    margin-bottom: 37px;
+}
+
+.footer_block_img {
+    min-width: 243px;
+    height: 114px;
+    padding: 4.5px;
+    margin: 0 70px 26px 0;
+}
+
+.block_img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer_block_info {
+    flex: 0 1 70%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block_info_one {
+    height: 111px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.info_one_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #E2E2E2;
+
+}
+
+.info_one_link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+.link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+.info_link_flex {
+    display: flex;
+    margin-top: 13px;
+}
+
+.info_link_img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.info_one_link_descr {
+    margin-top: 13px;
+    text-decoration: none;
+}
+
+.footer_desrc {
+    position: absolute;
+    bottom: 0;
+    margin: 24px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B9B9B9;
+}
+
+
+@media screen and (max-width: 1332px) {
+    .footer_container {
+        padding: 48px 167px 24px 99px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footer_container {
+        padding: 34px 0px 15px 59px;
+        height: 600px;
+    }
+
+    .block_info_one {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer_container {
+        padding: 24px 10px 5px 24px;
+        height: 600px;
+    }
+
+    .block_info_one {
+        width: 100%;
+    }
+}

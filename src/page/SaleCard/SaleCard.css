@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.salecard_container {
+    width: 100%;
+    padding: 0 99px 50px 99px;
+    background-color: white;
+}
+
+.cardid_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.cardid_img_block {
+    width: 624px;
+    height: 1240px;
+}
+
+.img_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.img_block_img {
+    width: 308px;
+    height: 492px;
+    margin-bottom: 8px;
+}
+
+.img_slide {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_slide_img {
+    width: 150px;
+    height: 240px;
+}
+.cardid_info_block {
+    width: 100%;
+}
+.cardid_info_block {
+    max-width: 520px;
+    height: 434px;
+    padding: 20px;
+}
+
+.info_block_opis {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin-bottom: 18px;
+}
+
+.info_block_flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.info_block_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #1D1D1B;
+    margin: 0 6px 6px 0;
+}
+
+.info_block_descr {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #393939;
+    margin: 0 0 6px 0;
+}
+
+.news_colorsss {
+    display: flex;
+    width: 162px;
+    justify-content: space-between;
+}
+
+.info_block_descr_sale {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: line-through;
+    color: #979797;
+}
+
+.info_block_title_sale {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin: 6px 6px 6px 0;
+}
+
+.info_block_descr_about {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 180%;
+    color: #6A6A6A;
+    margin-bottom: 16px;
+}
+.info_block_flex_js {
+    max-width: 436px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cardid_info_btn  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.cardid_info_btn_shop {
+    height: 44px;
+    width: 428px;
+    padding: 12px, 30px, 12px, 18px;
+    background-color: #1D1D1B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+.cardid_info_btn_svg *, .cardid_info_btn_svg1 *{
+    fill: white;
+}
+.cardid_info_btn_svg {
+    margin-right: 10px;
+}
+
+.cardid_info_btn_love {
+    width: 44px;
+    height: 44px;
+    background: #1D1D1B;
+}
+
+@media screen and (max-width: 1300px) {
+    .salecard_container {
+        padding: 0 99px 50px 99px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .salecard_container {
+        padding: 0 50px 50px 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .salecard_container {
+        padding: 0 30px 50px 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .salecard_container {
+        padding: 0 16px 50px 16px;
+    }
+}

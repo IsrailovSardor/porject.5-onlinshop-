@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.cardss_container {
+    width: 100%;
+    padding: 0 99px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.bestseller_title {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.bestseller_title_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin: 0;
+}
+
+.bestseller_sale {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.bestseller_card {
+    position: relative;
+    max-width: 286px;
+    height: 536px;
+    border: 1px solid #F1F1F1;
+    margin-bottom: 8px;
+}
+
+.bestseller_img {
+    height: 437px;
+    width: 100%;
+}
+
+.swiper {
+    height: 437px;
+    width: 100%;
+}
+
+.bestseller_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bestseller_icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+}
+
+.bestseller_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65px;
+    margin: 6px 8px;
+}
+
+.text_title,
+.text_size,
+.text_sell {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #393939;
+    margin: 0;
+}
+
+.text_sell {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #393939;
+}
+
+.text_size {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #7C7C7C;
+}
+
+.bestseller_color {
+    margin: 6px 8px;
+    width: 162px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.color1 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #73A39D;
+}
+
+.color2 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #84CC4C;
+}
+
+.color3 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #B5A8A1;
+}
+
+.color4 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #AB844A;
+}
+
+.color5 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #6977F0;
+}
+
+.color6 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.color7 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #141414;
+}
+
+.color8 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FF0000;
+}
+
+.bestseller_title_button {
+    margin-top: 16px;
+    padding: 8px 38px;
+    background: #1D1D1B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.news_container {
+    margin-top: 44px;
+}
+
+.collection_sale {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.collection_card {
+    position: relative;
+    max-width: 286px;
+    height: 374px;
+    border: 1px solid #F1F1F1;
+    margin-bottom: 8px;
+}
+
+.collection_card_block {
+    position: relative;
+}
+
+.collection_card_img {
+    width: 100%;
+    height: 330px;
+}
+
+.collection_card_text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.collection_card_form {
+    width: 100%;
+    height: 44px;
+}
+
+.collection_card_btn {
+    width: 100%;
+    height: 100%;
+    padding: 12px 18px 12px 30px;
+    background: #1D1D1B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+    fill: black;
+}
+
+.collection_card_btn_icon {
+    margin-left: 15px;
+}
+
+.collection_card_btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.collection_card_btn:hover>.collection_card_btn_icon * {
+    fill: black;
+}
+@media screen and (max-width: 1300px) {
+    .cardss_container {
+        padding: 0 99px;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .cardss_container {
+        padding: 0 59px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .cardss_container {
+        padding: 0 39px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .App {
+        padding: 0;
+    }
+  }

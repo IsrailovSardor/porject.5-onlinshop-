@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+.collection_container  {
+    padding: 0 99px 50px 99px;
+    background-color: white;
+}
+.bestseller_titles {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin-bottom: 18px;
+}
+@media screen and (max-width: 1300px) {
+    .collection_block {
+        padding: 0 99px;    
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .collection_block {
+        padding: 0 50px;    
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .collection_block {
+        padding: 0 30px;    
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .collection_block {
+        padding: 0 16px;    
+    }
+}

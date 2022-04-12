@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+.collectionId_container {
+    padding: 0 99px 64px 99px;
+    background-color: white;
+}
+
+.news_cards {
+    height: 420px;
+    width: 226px;
+    position: relative;
+}
+
+.news_colors {
+    margin: 6px 0px;
+    width: 162px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news_cards_img img {
+    height: 332px;
+    width: 100%;
+}
+
+.news_cards_sale {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 50px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 0% 100%);
+    background: #E5271B;
+}
+
+.news_cards_sale p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-bottom: 25px;
+    transform: rotate(-45deg);
+}
+
+.cards_sale {
+    display: flex;
+}
+
+.cards_block {
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.cards_sale_one {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration-line: line-through;
+    color: #979797;
+    margin-right: 8px;
+}
+
+.cards_sale_two {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1D1D1B;
+}
+
+.cards_sale_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    color: #393939;
+}
+
+.cards_sale_size {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #979797;
+}
+
+@media screen and (max-width: 1300px) {
+    .collectionId_container {
+        padding: 0 99px 64px 99px;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .collectionId_container {
+        padding: 0 50px 64px 50px;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .collectionId_container {
+        padding: 0 30px 64px 30px;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .collectionId_container {
+        padding: 0 16px 64px 16px;
+        background-color: white;
+    }
+}
