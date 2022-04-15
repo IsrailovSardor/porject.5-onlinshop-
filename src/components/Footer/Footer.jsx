@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
-import logo from "../../assets/img/logofoot.png";
 import tel from "../../assets/icon/tel.svg";
 import mail from "../../assets/icon/mail.svg";
 import ins from "../../assets/icon/instagram.svg";
 import teleg from "../../assets/icon/telegram.svg";
 import wat from "../../assets/icon/wa.svg";
 import { Link } from "react-router-dom";
+import { fetchDataInform } from "../data";
 
 const Footer = () => {
+  const [inform, setInform] = useState([]);
+  useEffect(() => {
+    fetchDataInform().then((data) => setInform(data));
+  }, []);
   return (
     <div className="footer_container">
       <div className="footer_block">
         <div className="footer_block_img">
-          <img src={logo} alt="" className="block_img" />
+          <img src={inform.logo} alt="" className="block_img" />
         </div>
         <div className="footer_block_info">
           <div className="block_info_one">
@@ -27,13 +31,13 @@ const Footer = () => {
                 </Link>
               </p>
               <p className="info_one_link_descr">
-                <Link to="/about" className="link">
+                <Link to="/news" className="link">
                   Новости
                 </Link>
               </p>
               <p className="info_one_link_descr">
-                <Link to="/about" className="link">
-                  Помощь{" "}
+                <Link to="/help" className="link">
+                  Помощь
                 </Link>
               </p>
             </div>
@@ -46,22 +50,19 @@ const Footer = () => {
               <div className="info_link_flex">
                 <img src={tel} alt="" className="info_link_img" />
                 <a href="tel:+996 500 123 456" className="link">
-                  {" "}
-                  +996 500 123 456
+                  {inform.number1}
                 </a>
               </div>
               <div className="info_link_flex">
                 <img src={tel} alt="" className="info_link_img" />
                 <a href="tel:+996 500 123 456" className="link">
-                  {" "}
-                  +996 500 123 456
+                  {inform.number2}
                 </a>
               </div>
               <div className="info_link_flex">
                 <img src={mail} alt="" className="info_link_img" />
                 <a href="mailto:mail@gmail.com" className="link">
-                  {" "}
-                  mail@gmail.com
+                  {inform.mail}
                 </a>
               </div>
             </div>
@@ -73,31 +74,19 @@ const Footer = () => {
             <div className="info_one_link">
               <div className="info_link_flex">
                 <img src={ins} alt="" className="info_link_img" />
-                <a
-                  href="http://https://oc.kg/#/movie/id/19435"
-                  target="_blank"
-                  className="link"
-                >
+                <a href={inform.inst} target="_blank" className="link">
                   Instagram
                 </a>
               </div>
               <div className="info_link_flex">
                 <img src={teleg} alt="" className="info_link_img" />
-                <a
-                  href="http://https://oc.kg/#/movie/id/19435"
-                  target="_blank"
-                  className="link"
-                >
+                <a href={inform.tel} target="_blank" className="link">
                   Telegram
                 </a>
               </div>
               <div className="info_link_flex">
                 <img src={wat} alt="" className="info_link_img" />
-                <a
-                  href="http://https://oc.kg/#/movie/id/19435"
-                  target="_blank"
-                  className="link"
-                >
+                <a href={inform.wat} target="_blank" className="link">
                   Whatsapp
                 </a>
               </div>

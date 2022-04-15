@@ -1,235 +1,551 @@
 {
   "bestseller": [
     {
-      "img": "/img/best1.png",
-      "img1": "/img/best2.png",
-      "img2": "/img/best3.png",
-      "img4": "/img/best4.png",
-      "img5": "/img/best5.png",
-      "img6": "/img/best6.png",
-      "img7": "/img/best7.png",
-      "img8": "/img/best8.png",
-      "title": "Вечернее платье",
-      "sell": "1365р",
-      "sellNews": "2360р",
+      "img": [
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best3.png",
+        "/img/best4.png",
+        "/img/best5.png",
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее юбки",
+      "sell": 1365,
+      "sellNews": 2360,
       "size": "42-50",
       "discount": 1,
+      "discountSale": 50,
       "art": "Платье PL984/dakota",
       "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 1
     },
     {
-      "img": "/img/best2.png",
-      "img1": "/img/best1.png",
-      "img2": "/img/best8.png",
-      "img4": "/img/best7.png",
-      "img5": "/img/best6.png",
-      "img6": "/img/best5.png",
-      "img7": "/img/best4.png",
-      "img8": "/img/best3.png",
-      "title": "Вечернее платье",
-      "sell": "1360р",
-      "sellNews": "2360р",
+      "img": [
+        "/img/best2.png",
+        "/img/best1.png",
+        "/img/best8.png",
+        "/img/best7.png",
+        "/img/best6.png",
+        "/img/best5.png",
+        "/img/best4.png",
+        "/img/best3.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее шорты",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
+      "discount": 1,
+      "discountSale": 70,
       "art": "Платье PL984/dakota",
-      "discount": 0,
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 2
     },
     {
-      "img": "/img/best3.png",
-      "img1": "/img/best2.png",
-      "img2": "/img/best1.png",
-      "img4": "/img/best8.png",
-      "img5": "/img/best7.png",
-      "img6": "/img/best6.png",
-      "img7": "/img/best5.png",
-      "img8": "/img/best4.png",
+      "img": [
+        "/img/best3.png",
+        "/img/best2.png",
+        "/img/best1.png",
+        "/img/best8.png",
+        "/img/best7.png",
+        "/img/best6.png",
+        "/img/best5.png",
+        "/img/best4.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "art": "Платье PL984/dakota",
-      "sell": "1360р",
-      "sellNews": "2360р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
       "discount": 0,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 3
     },
     {
-      "img": "/img/best4.png",
-      "img1": "/img/best3.png",
-      "img2": "/img/best2.png",
-      "img4": "/img/best1.png",
-      "img5": "/img/best8.png",
-      "img6": "/img/best7.png",
-      "img7": "/img/best6.png",
-      "img8": "/img/best5.png",
+      "img": [
+        "/img/best4.png",
+        "/img/best3.png",
+        "/img/best2.png",
+        "/img/best1.png",
+        "/img/best5.png",
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "art": "Платье PL984/dakota",
-      "sell": "1360р",
-      "sellNews": "2360р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
-      "discount": "0",
+      "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 4
     },
     {
-      "img": "/img/best5.png",
-      "img1": "/img/best4.png",
-      "img2": "/img/best3.png",
-      "img4": "/img/best2.png",
-      "img5": "/img/best1.png",
-      "img6": "/img/best8.png",
-      "img7": "/img/best7.png",
-      "img8": "/img/best6.png",
+      "img": [
+        "/img/best5.png",
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png",
+        "/img/best4.png",
+        "/img/best3.png",
+        "/img/best2.png",
+        "/img/best1.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "art": "Платье PL984/dakota",
-      "sell": "1560р",
-      "sellNews": "2360р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
       "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 5
     },
     {
-      "img": "/img/best6.png",
-      "img1": "/img/best7.png",
-      "img2": "/img/best8.png",
-      "img4": "/img/best1.png",
-      "img5": "/img/best2.png",
-      "img6": "/img/best3.png",
-      "img7": "/img/best4.png",
-      "img8": "/img/best5.png",
+      "img": [
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png",
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best3.png",
+        "/img/best4.png",
+        "/img/best5.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "art": "Платье PL984/dakota",
-      "sell": "1360р",
-      "sellNews": "2360р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
       "discount": 0,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 6
     },
     {
-      "img": "/img/best7.png",
-      "img1": "/img/best8.png",
-      "img2": "/img/best1.png",
-      "img4": "/img/best2.png",
-      "img5": "/img/best3.png",
-      "img6": "/img/best4.png",
-      "img7": "/img/best5.png",
-      "img8": "/img/best6.png",
+      "img": [
+        "/img/best7.png",
+        "/img/best8.png",
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best3.png",
+        "/img/best4.png",
+        "/img/best5.png",
+        "/img/best6.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "art": "Платье PL984/dakota",
-      "sell": "1360р",
-      "sellNews": "2360р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
-      "discount": 0,
+      "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 7
     },
     {
-      "img": "/img/best8.png",
-      "img1": "/img/best7.png",
-      "img2": "/img/best6.png",
-      "img4": "/img/best5.png",
-      "img5": "/img/best4.png",
-      "img6": "/img/best3.png",
-      "img7": "/img/best2.png",
-      "img8": "/img/best1.png",
+      "img": [
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best8.png",
+        "/img/best7.png",
+        "/img/best6.png",
+        "/img/best5.png",
+        "/img/best4.png",
+        "/img/best3.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "art": "Платье PL984/dakota",
-      "sell": "1560р",
-      "sellNews": "2360р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
       "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 8
-    }
-  ],
-  "news": [
-    {
-      "img": "/img/news1.png",
-      "img1": "/img/news2.png",
-      "img2": "/img/news3.png",
-      "title": "Вечернее платье",
-      "sell": "1365р",
-      "sellNews": "960р",
+    },    {
+      "img": [
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best3.png",
+        "/img/best4.png",
+        "/img/best5.png",
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее юбки",
+      "sell": 1365,
+      "sellNews": 2360,
       "size": "42-50",
+      "discount": 1,
+      "discountSale": 50,
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 1
     },
     {
-      "img": "/img/news2.png",
-      "img1": "/img/news4.png",
-      "img2": "/img/news3.png",
-      "title": "Вечернее платье",
-      "sell": "1360р",
-      "sellNews": "960р",
+      "img": [
+        "/img/best2.png",
+        "/img/best1.png",
+        "/img/best8.png",
+        "/img/best7.png",
+        "/img/best6.png",
+        "/img/best5.png",
+        "/img/best4.png",
+        "/img/best3.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее шорты",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
+      "discount": 1,
+      "discountSale": 70,
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 2
     },
     {
-      "img": "/img/news3.png",
-      "img1": "/img/news2.png",
-      "img2": "/img/news1.png",
+      "img": [
+        "/img/best3.png",
+        "/img/best2.png",
+        "/img/best1.png",
+        "/img/best8.png",
+        "/img/best7.png",
+        "/img/best6.png",
+        "/img/best5.png",
+        "/img/best4.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "sell": "1360р",
-      "sellNews": "960р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
+      "discount": 0,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 3
     },
     {
-      "img": "/img/news4.png",
-      "img1": "/img/news1.png",
-      "img2": "/img/news3.png",
+      "img": [
+        "/img/best4.png",
+        "/img/best3.png",
+        "/img/best2.png",
+        "/img/best1.png",
+        "/img/best5.png",
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "sell": "1360р",
-      "sellNews": "960р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
+      "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 4
     },
     {
-      "img": "/img/news1.png",
-      "img1": "/img/news2.png",
-      "img2": "/img/news3.png",
+      "img": [
+        "/img/best5.png",
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png",
+        "/img/best4.png",
+        "/img/best3.png",
+        "/img/best2.png",
+        "/img/best1.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
       "title": "Вечернее платье",
-      "sell": "1365р",
-      "sellNews": "960р",
+      "sell": "1365",
+      "sellNews": "2360",
       "size": "42-50",
+      "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "id": 5
+    },
+    {
+      "img": [
+        "/img/best6.png",
+        "/img/best7.png",
+        "/img/best8.png",
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best3.png",
+        "/img/best4.png",
+        "/img/best5.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее платье",
+      "sell": "1365",
+      "sellNews": "2360",
+      "size": "42-50",
+      "discount": 0,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+      "id": 6
+    },
+    {
+      "img": [
+        "/img/best7.png",
+        "/img/best8.png",
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best3.png",
+        "/img/best4.png",
+        "/img/best5.png",
+        "/img/best6.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее платье",
+      "sell": "1365",
+      "sellNews": "2360",
+      "size": "42-50",
+      "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+      "id": 7
+    },
+    {
+      "img": [
+        "/img/best1.png",
+        "/img/best2.png",
+        "/img/best8.png",
+        "/img/best7.png",
+        "/img/best6.png",
+        "/img/best5.png",
+        "/img/best4.png",
+        "/img/best3.png"
+      ],
+      "color": [
+        "#73A39D",
+        "#84CC4C",
+        "#B5A8A1",
+        "#AB844A",
+        "#6977F0",
+        "#D1D1D1",
+        "#141414",
+        "#FF0000"
+      ],
+      "title": "Вечернее платье",
+      "sell": "1365",
+      "sellNews": "2360",
+      "size": "42-50",
+      "discount": 1,
+      "discountSale": "40 %",
+      "art": "Платье PL984/dakota",
+      "about": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+      "id": 8
     }
   ],
   "collection": [
     {
-      "img": "./img/colec1.png",
+      "img": "/img/colec1.png",
       "title": "Повседневная одежда",
       "id": 1
     },
     {
-      "img": "./img/colec5.png",
+      "img": "/img/colec2.png",
       "title": "Одежда на пляж",
       "id": 2
     },
     {
-      "img": "./img/colec3.png",
+      "img": "/img/colec3.png",
       "title": "Юбки",
       "id": 3
     },
     {
-      "img": "./img/colec4.png",
+      "img": "/img/colec5.png",
       "title": "Джинсы",
       "id": 4
     },
     {
-      "img": "./img/colec4.png",
-      "title": "Повседневная одежда",
-      "id": 1
+      "img": "/img/colec4.png",
+      "title": "Коллекция лето 2020",
+      "id": 5
     },
     {
-      "img": "./img/colec6.png",
-      "title": "Одежда на пляж",
-      "id": 2
+      "img": "/img/colec5.png",
+      "title": "Коллекция лето 2020",
+      "id": 6
     },
     {
-      "img": "./img/colec2.png",
+      "img": "/img/colec2.png",
+      "title": "Коллекция осень 2020",
+      "id": 7
+    },
+    {
+      "img": "/img/colec3.png",
+      "title": "Коллекция зима 2020",
+      "id": 8
+    },
+    {
+      "img": "/img/colec4.png",
       "title": "Юбки",
-      "id": 3
+      "id": 7
     },
     {
-      "img": "./img/colec1.png",
+      "img": "/img/colec1.png",
       "title": "Джинсы",
-      "id": 4
+      "id": 8
     }
   ],
   "chat": [
@@ -281,6 +597,45 @@
       "title": "Lorem ipsum dolor sit amet",
       "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
       "id": 2
+    },
+    {
+      "img": "/img/newspost3.png",
+      "title": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
+      "id": 3
+    },
+    {
+      "img": "/img/newspost4.png",
+      "title": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
+      "id": 4
+    },
+    {
+      "img": "/img/newspost5.png",
+      "title": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
+      "id": 5
+    },
+    {
+      "img": "/img/newspost2.png",
+      "title": "Lorem ipsum dolor sit amet",
+      "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis",
+      "id": 6
     }
-  ]
+  ],
+  "publ": {
+      "pub1": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue. Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quiSit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec onguSit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec onguSit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec onguSit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec onguSit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec onguSit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque  Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus."
+  },  
+  "informat": 
+    {
+      "logo": "/img/logo.png",
+      "number1": "+ 996502000000",
+      "number2": "+ 996700200700",
+      "mail": "example@mail.ru",
+      "wat": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
+      "inst": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
+      "tel": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
+      "id": 1
+    }
+  
 }

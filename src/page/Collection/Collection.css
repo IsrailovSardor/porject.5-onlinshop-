@@ -1,40 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
-.collection_container  {
-    padding: 0 99px 50px 99px;
-    background-color: white;
-}
-.bestseller_titles {
+
+.collection_container {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
+    height: auto;
+    padding: 0 99px 40px 99px;
+    background-color: rgb(255, 255, 255);
+}
+
+.collection_title {
+    margin: 18px 0;
+}
+
+.collection_title_text {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
     color: #393939;
-    margin-bottom: 18px;
 }
+
+.colrender_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 14px;
+}
+
+.collection_title_btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn_plag {
+    display: flex;
+}
+
+.btn_block_plaf {
+    width: 44px;
+    height: 44px;
+    background-color: #1D1D1B;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.next_btn {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next_btn:last-child {
+    margin-right: 0;
+}
+.rigt_btn_pl {
+    height: 18px;
+    width: 10px;
+}
+.rigt_btn_pl * {
+    fill: rgb(0, 0, 0);
+}
+
 @media screen and (max-width: 1300px) {
     .collection_block {
-        padding: 0 99px;    
+        padding: 0 99px;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .collection_block {
-        padding: 0 50px;    
+        padding: 0 50px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .collection_block {
-        padding: 0 30px;    
+        padding: 0 30px;
     }
 }
 
 @media screen and (max-width: 700px) {
     .collection_block {
-        padding: 0 16px;    
+        padding: 0 16px;
     }
 }

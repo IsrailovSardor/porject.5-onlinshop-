@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import Scroll from "../../components/Scroll/Scroll";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -30,10 +29,10 @@ const News = () => {
         {news.map((news) => {
           return (
             <div className="newspage_card">
-              <img src={news.img} alt="" />
+              <img src={news.img} alt="" className="newspage_card_img"/>
               <div>
-                <p>{news.title}</p>
-                <p>{news.text}</p>
+                <p className="newspage_card_title">{news.title}</p>
+                <p className="newspage_card_descr">{news.text}</p>
               </div>
             </div>
           );

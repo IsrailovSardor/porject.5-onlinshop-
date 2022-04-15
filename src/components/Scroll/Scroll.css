@@ -44,3 +44,139 @@
     margin-right: 6px;
     background-color: #27AE60;
 }
+
+
+.modal-content {
+    max-width: 436px;
+    min-height: 316px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 32px 38px;
+}
+
+.modalChat_block_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 12px;
+    height: 14px;
+    width: 14px;
+}
+
+.block_title_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+    color: #393939;
+    margin-bottom: 8px;
+}
+
+.block_title_descr {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #393939;
+    margin-bottom: 12px;
+}
+
+.block_input_from {
+    max-width: 360px;
+    height: 44px;
+    border: 1px solid rgba(31, 31, 31, 0.08);
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    display: flex;
+}
+
+.block_input_img {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    margin-right: 10px;
+}
+
+.block_input {
+    max-width: 336px;
+    height: 24px;
+    padding: 4px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #BEBEBE;
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
+}
+
+.block_input:focus {
+    color: black;
+}
+
+.block_input_btn {
+    width: 100%;
+    height: 44px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), #1D1D1B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.modalmode_block {
+    width: 328px;
+    height: 264px;
+    text-align: center;
+    margin: auto;
+}
+
+.modalmode_block_img {
+    width: 60px;
+    height: 60px;
+    margin: 15px 0 20px 0;
+}
+
+.modalmode_block_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100%;
+    color: #393939;
+    margin-bottom: 10px;
+}
+
+.modalmode_block_descr {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #393939;
+}
+
+.modalmode_title {
+    margin-bottom: 25px;
+}
+
+.modalmode_btn button {
+    width: 100%;
+    height: 44px;
+    background-color: #1D1D1B;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}

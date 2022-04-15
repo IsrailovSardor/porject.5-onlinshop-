@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import love from "../../assets/icon/love.svg";
 import trash from "../../assets/icon/shop.svg";
 import search from "../../assets/icon/search.svg";
 import "./Navbar.css";
-const Navbar = () => {
+import { fetchDataInform } from "../data";
+import { useSelector } from "react-redux";
+
+const Navbar = ({ itemsCount }) => {
+  const state = useSelector((state) => state.handleCart)
+  const states = useSelector((state) => state.handlefavor)
   // MOBILE
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
@@ -17,6 +22,11 @@ const Navbar = () => {
       setIcon("nav__toggler toggle");
     } else setIcon("nav__toggler");
   };
+
+  const [inform, setInform] = useState([]);
+  useEffect(() => {
+    fetchDataInform().then((data) => setInform(data));
+  });
   return (
     <div className="header_container">
       {/* MOBILE */}
@@ -29,6 +39,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" className="mobile_logo" />
         <button className="mobile_seacr">
           <img src={search} alt="" className="mobile_img" />
+          <span className="cart-button">20</span>
         </button>
       </div>
       <div className={active}>
@@ -69,11 +80,12 @@ const Navbar = () => {
           <p className="tell_number">
             Тел:
             <a href="tel:+996000000000" className="tell_numbers">
-              +996 000 00 00 00
+              {inform.number1}
             </a>
           </p>
         </div>
       </div>
+
       {/* WEB */}
       <div className="header_link">
         <div className="header_links">
@@ -90,15 +102,17 @@ const Navbar = () => {
         <div className="header_tell">
           <p className="tell_number">
             Тел:
-            <a href="tel:+996000000000" className="tell_numbers">
-              +996 000 00 00 00
+            <a href="sss" className="tell_numbers">
+              {inform.number1}
             </a>
           </p>
         </div>
       </div>
       <div className="header_logo">
         <div className="header_img">
-          <img src={logo} alt="logo" className="img_logo" />
+          <Link to="/" className="header_links_text">
+            <img src={inform.logo} alt="logo" className="img_logo" />
+          </Link>
         </div>
         <div className="header_search">
           <form className="header_input">
@@ -109,15 +123,21 @@ const Navbar = () => {
           </form>
           <div className="header_shops">
             <div className="header_love">
+            <div className="cart-button">
               <img src={love} alt="love" className="search_link_icon" />
-              <Link to="/" className="search_link">
+              <span className="cart-button_icon">{states.length}</span>
+              </div>
+              <Link to="/favorites" className="search_link">
                 Избранное
               </Link>
             </div>
             <div className="header_line"> {/*line*/}</div>
             <div className="header_love">
-              <img src={trash} alt="shop" className="search_link_icon" />
-              <Link to="/" className="search_link">
+              <div className="cart-button">
+                <img src={trash} alt="shop" className="search_link_icon" />
+                <span className="cart-button_icon">{state.length}</span>
+              </div>
+              <Link to="/basket" className="search_link">
                 Корзина
               </Link>
             </div>

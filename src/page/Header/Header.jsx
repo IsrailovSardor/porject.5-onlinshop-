@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../../components/Card/Card";
 import CarouselBoot from "../../components/Carousel/CarouselBoot";
 import money from "../../assets/img/money.png";
 import group from "../../assets/img/group.png";
@@ -13,17 +12,18 @@ import tel from "../../assets/icon/tel.svg";
 import teleg from "../../assets/icon/telegram.svg";
 import wat from "../../assets/icon/wa.svg";
 import Scroll from "../../components/Scroll/Scroll";
-
-
-
+import RenCarBes from "../../components/RenderCard/RenCarBes";
+import RendCardNews from "../../components/RenderCard/RendCardNews";
+import RenCarCol from "../../components/RenderCard/RenCarCol";
 
 const Header = () => {
-  
   return (
     <div className="home_container">
-      <Scroll/>
+      <Scroll />
       <CarouselBoot />
-      <Card />
+      <RenCarBes />
+      <RendCardNews />
+      <RenCarCol/>
       <div className="about_container">
         <div className="about_block">
           <div className="about_block_img">
@@ -72,7 +72,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

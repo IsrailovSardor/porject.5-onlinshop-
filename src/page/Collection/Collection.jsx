@@ -1,29 +1,34 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Scroll from "../../components/Scroll/Scroll";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
-import './Collection.css'
+import "./Collection.css";
 import { ReactComponent as Right } from "../../assets/icon/right.svg";
+import { ReactComponent as Left } from "../../assets/icon/left.svg";
+import { fetchDataCollections } from "../../components/data";
+import axios from "axios";
+import Counris from "../../components/Plagin/Counris";
+import Pagin from "../../components/Plagin/Pagin";
 
-const fetchDataCollection = (id) => {
-  return axios
-    .get("http://localhost:3000/collection")
-    .then((response) => response.data);
-};
 const Collection = () => {
-  // COLLECTION
-  const [collection, setCollection] = useState([]);
+  // plag
+  const [countries, setCountries] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [countriesPerPage] = useState(8);
   useEffect(() => {
-    fetchDataCollection().then((data) => setCollection(data));
+    const getCounries = async () => {
+      const res = await axios.get("http://localhost:3000/collection");
+      setCountries(res.data);
+    };
+    getCounries();
   }, []);
-  const [collectionMode, setCollectionMode] = useState(false);
-  const showss = () => {
-    setCollectionMode(true);
-  };
-  const hidess = () => {
-    setCollectionMode(false);
-  };
+  const lastCountryIndex = currentPage * countriesPerPage;
+  const firstCountryIndex = lastCountryIndex - countriesPerPage;
+  const correntCounry = countries.slice(firstCountryIndex, lastCountryIndex);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const nextPage = () => setCurrentPage((prev) => prev + 1);
+  const prevPage = () => setCurrentPage((prev) => prev - 1);
+
   return (
     <div className="collection_container">
       <Scroll />
@@ -33,72 +38,26 @@ const Collection = () => {
         </Link>
         <p className="breadcrumb_links">Коллекция</p>
       </Breadcrumbs>
-      <div className="collection_block">
-        <div className="bestseller_titles">
-          <p className="bestseller_title_texts">Коллекция</p>
+      <section className="collection_section">
+        <div className="collection_title">
+          <p className="collection_title_text">Коллекция</p>
+          <Counris countries={correntCounry} />
         </div>
-        <div className="collection_sale">
-          {collection.map((coll) => {
-            return (
-              <div className="collection_card">
-                <div className="collection_card_block">
-                  <img src={coll.img} alt="" className="collection_card_img" />
-                  <p className="collection_card_text">{coll.title}</p>
-                </div>
-                <div className="collection_card_form">
-                  {/* <button className="collection_card_btn">
-                    Смотреть все
-                    <Right className="collection_card_btn_icon" />
-                  </button> */}
-                  <Link to={`/collectionId/${coll.id}`}>
-                  <button className="collection_card_btn">
-                    Смотреть все
-                    <Right className="collection_card_btn_icon" />
-                  </button>
-              </Link>
-                </div>
-              </div>
-            );
-          })}
+
+        <div className="collection_title_btn">
+          <button className="next_btn" onClick={prevPage}>
+            <Left className="rigt_btn_pl" />
+          </button>
+          <Pagin
+            paginate={paginate}
+            countriesPerPage={countriesPerPage}
+            totalCounris={countries.length}
+          />
+          <button onClick={nextPage} className="next_btn">
+            <Right className="rigt_btn_pl" />
+          </button>
         </div>
-        {collectionMode ? (
-          <div className="collection_sale">
-            {collection.map((coll) => {
-              return (
-                <div className="collection_card">
-                  <div className="collection_card_block">
-                    <img
-                      src={coll.img}
-                      alt=""
-                      className="collection_card_img"
-                    />
-                    <p className="collection_card_text">{coll.title}</p>
-                  </div>
-                  <div className="collection_card_form">
-                    <button className="collection_card_btn">
-                      Смотреть все
-                      <Right className="collection_card_btn_icon" />
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          ""
-        )}
-        <div className="bestseller_title_btn">
-          {collectionMode ? (
-            <button className="bestseller_title_button" onClick={hidess}>
-              Скрыть
-            </button>
-          ) : (
-            <button className="bestseller_title_button" onClick={showss}>
-             ДОДЕЛАТЬ ______________________________________________________--
-            </button>
-          )}
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

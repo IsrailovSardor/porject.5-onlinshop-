@@ -57,10 +57,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* background-color: #354455; */
 }
-
+.cart-button {
+    position: relative;
+}
+.cart-button_icon {
+    min-width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    display: flex;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+padding: 4px;
+    box-sizing: border-box;
+}
 .header_love {
     display: flex;
     max-width: 120px;

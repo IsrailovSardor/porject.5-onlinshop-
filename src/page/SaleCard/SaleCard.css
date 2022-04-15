@@ -14,30 +14,23 @@
 }
 
 .cardid_img_block {
-    width: 624px;
+    width: 627px;
     height: 1240px;
-}
-
-.img_block {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-
 .img_block_img {
-    width: 308px;
-    height: 492px;
-    margin-bottom: 8px;
-}
-
-.img_slide {
-    display: flex;
-    justify-content: space-between;
-}
-
-.img_slide_img {
     width: 150px;
     height: 240px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+.img_block_img:nth-child(6n) {
+    margin-left: 4px;
+}
+.img_block_img:nth-child(-n+4) {
+    width: 308px;
+    height: 492px;
 }
 .cardid_info_block {
     width: 100%;
@@ -86,8 +79,8 @@
 
 .news_colorsss {
     display: flex;
-    width: 162px;
-    justify-content: space-between;
+    align-items: center;
+    margin: 0 6px 6px 0;
 }
 
 .info_block_descr_sale {
@@ -155,6 +148,7 @@
     height: 44px;
     background: #1D1D1B;
 }
+
 
 @media screen and (max-width: 1300px) {
     .salecard_container {

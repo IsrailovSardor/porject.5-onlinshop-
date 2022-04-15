@@ -9,7 +9,10 @@ import Collection from './page/Collection/Collection';
 import CollectionId from './page/CollectionId/CollectionId';
 import SaleCard from './page/SaleCard/SaleCard';
 import News from './page/News/News';
-
+import Help from './components/Help/Help';
+import Basket from './page/Basket/Basket';
+import Public from './page/Public/Public';
+import Favorites from './page/Favorites/Favorites';
 
 
 function App() {
@@ -23,6 +26,10 @@ function App() {
         <Route path="/collectionId/:id" element={<CollectionId />} />
         <Route path="/card/:id" element={<SaleCard />} />
         <Route path="/news" element={<News />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/basket" element={<Basket />} />
+        <Route path="/public" element={<Public />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer />
     </div>
