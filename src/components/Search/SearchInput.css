@@ -1,0 +1,27 @@
+.autoComplete {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    z-index: 701;
+    max-height: 240px;
+    height: auto;
+    overflow: auto;
+}
+
+.autoCompItem {
+    padding: 10px;
+}
+
+.autoCompItem:hover {
+    background-color: rgb(156, 156, 156);
+    cursor: pointer;
+    transition: cubic-bezier(1, 0, 0, 1) .3s all;
+}
+
+.fominosad {
+    position: relative;
+}

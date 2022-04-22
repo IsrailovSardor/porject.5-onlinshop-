@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
+import "./Scroll.css";
+// COMPONENTS
 import massen from "../../assets/icon/chat.svg";
 import up from "../../assets/icon/up.svg";
 import close from "../../assets/icon/close.svg";
@@ -7,14 +10,13 @@ import tell from "../../assets/icon/tell.svg";
 import teleg from "../../assets/icon/telegram.svg";
 import wat from "../../assets/icon/wa.svg";
 import user from "../../assets/icon/user.svg";
-import { Modal } from "react-bootstrap";
-import axios from "axios";
 import complite from "../../assets/icon/complite.svg";
-import "./Scroll.css";
+// BOOTSTRAP
+import { Modal } from "react-bootstrap";
 
 function MyVerticallyCenteredModal(props) {
   const [complitMode, setCompliteMode] = useState(false);
-
+  // user
   const [userName, setUserName] = useState("");
   const [number, setNumber] = useState("");
   const handleUpdateChat = async (e) => {

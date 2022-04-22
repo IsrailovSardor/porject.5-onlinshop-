@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { ReactComponent as Right } from "../../assets/icon/right.svg";
 const Counris = ({ countries }) => {
   return (

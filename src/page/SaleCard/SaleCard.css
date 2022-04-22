@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
-
 .salecard_container {
     width: 100%;
-    padding: 0 99px 50px 99px;
-    background-color: white;
 }
 
 .cardid_container {
@@ -11,6 +7,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 32px;
+    padding: 15px 99px 0;
 }
 
 .cardid_img_block {
@@ -19,26 +16,29 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .img_block_img {
     width: 150px;
     height: 240px;
     margin-bottom: 8px;
     margin-right: 5px;
 }
+
 .img_block_img:nth-child(6n) {
     margin-left: 4px;
 }
+
 .img_block_img:nth-child(-n+4) {
     width: 308px;
     height: 492px;
 }
-.cardid_info_block {
-    width: 100%;
-}
+
 .cardid_info_block {
     max-width: 520px;
     height: 434px;
     padding: 20px;
+    position: static;
+    background-color: white;
 }
 
 .info_block_opis {
@@ -112,17 +112,20 @@
     color: #6A6A6A;
     margin-bottom: 16px;
 }
+
 .info_block_flex_js {
     max-width: 436px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.cardid_info_btn  {
+
+.cardid_info_btn {
     width: 100%;
     display: flex;
     align-items: center;
 }
+
 .cardid_info_btn_shop {
     height: 44px;
     width: 428px;
@@ -136,9 +139,12 @@
     color: #FFFFFF;
     margin-right: 10px;
 }
-.cardid_info_btn_svg *, .cardid_info_btn_svg1 *{
+
+.cardid_info_btn_svg *,
+.cardid_info_btn_svg1 * {
     fill: white;
 }
+
 .cardid_info_btn_svg {
     margin-right: 10px;
 }
@@ -148,8 +154,21 @@
     height: 44px;
     background: #1D1D1B;
 }
-
-
+.modal_img-zoom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal_img_img {
+    width: 400px;
+}
 @media screen and (max-width: 1300px) {
     .salecard_container {
         padding: 0 99px 50px 99px;

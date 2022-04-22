@@ -1,18 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
+// COMPONENTS
 import tel from "../../assets/icon/tel.svg";
 import mail from "../../assets/icon/mail.svg";
 import ins from "../../assets/icon/instagram.svg";
 import teleg from "../../assets/icon/telegram.svg";
 import wat from "../../assets/icon/wa.svg";
-import { Link } from "react-router-dom";
-import { fetchDataInform } from "../data";
+// REDUX
+import { useDispatch, useSelector } from "react-redux";
+import { getProdcutInform } from "../../redux/productact";
 
 const Footer = () => {
-  const [inform, setInform] = useState([]);
+  // INFORM
+  const dispatch = useDispatch();
+  const inform = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.inform;
+  });
   useEffect(() => {
-    fetchDataInform().then((data) => setInform(data));
+    dispatch(getProdcutInform());
   }, []);
+
   return (
     <div className="footer_container">
       <div className="footer_block">

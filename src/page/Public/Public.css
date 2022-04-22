@@ -1,27 +1,32 @@
 .public_container {
     width: 100%;
     height: auto;
-    background-color: #ECECEC;
+}
+
+.public_const {
     padding: 0px 99px 60px 99px;
 }
+
 .public_title {
     font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 29px;
-color: #393939;
-margin-top: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin-top: 14px;
 }
+
 .public_block {
     padding: 16px;
 }
+
 .public_descr {
     font-family: 'Montserrat';
-font-style: normal;
-font-weight: 300;
-font-size: 14px;
-line-height: 165%;
-color: #5B5B5B;
-margin-top: 15px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 165%;
+    color: #5B5B5B;
+    margin-top: 15px;
 }

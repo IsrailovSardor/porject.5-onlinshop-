@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import Scroll from "../../components/Scroll/Scroll";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
 import "./Collection.css";
-import { ReactComponent as Right } from "../../assets/icon/right.svg";
-import { ReactComponent as Left } from "../../assets/icon/left.svg";
-import { fetchDataCollections } from "../../components/data";
 import axios from "axios";
+// COMPONENTS
+import Scroll from "../../components/Scroll/Scroll";
 import Counris from "../../components/Plagin/Counris";
 import Pagin from "../../components/Plagin/Pagin";
+import { ReactComponent as Right } from "../../assets/icon/right.svg";
+import { ReactComponent as Left } from "../../assets/icon/left.svg";
+// MUI
+import Breadcrumbs from "@mui/material/Breadcrumbs";
 
 const Collection = () => {
-  // plag
+  // plaginat
   const [countries, setCountries] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesPerPage] = useState(8);
@@ -39,11 +40,10 @@ const Collection = () => {
         <p className="breadcrumb_links">Коллекция</p>
       </Breadcrumbs>
       <section className="collection_section">
-        <div className="collection_title">
+        <div className="collection_titles">
           <p className="collection_title_text">Коллекция</p>
           <Counris countries={correntCounry} />
         </div>
-
         <div className="collection_title_btn">
           <button className="next_btn" onClick={prevPage}>
             <Left className="rigt_btn_pl" />

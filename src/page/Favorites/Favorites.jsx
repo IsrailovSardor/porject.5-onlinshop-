@@ -1,100 +1,76 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Scroll from '../../components/Scroll/Scroll';
-import { delCart} from "../../redux/actions/index";
-import { Link } from 'react-router-dom';
-import Checkbox from "@mui/material/Checkbox";
-import IconButton from "@mui/material/IconButton";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Link } from "react-router-dom";
+// COMPONENTS
+import Scroll from "../../components/Scroll/Scroll";
+import Cart from "../../components/Cart/Cart";
+// MUI
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+// REDUX
+import { getFavorites, getProdcutBestLimit } from "../../redux/productact";
+import CartNews from "../../components/Cart/CartNews";
 
 const Favorites = () => {
+  const dispatch = useDispatch();
+  // favorites
+  const favorites = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.favorites;
+  });
+  useEffect(() => {
+    dispatch(getFavorites());
+    console.log(favorites);
+  }, []);
+  // BESTSELLER
+  const bestseller = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.bestsellerlimit;
+  });
+  const [limit] = useState(5);
+  useEffect(() => {
+    dispatch(getProdcutBestLimit(1, limit));
+  }, [limit]);
 
-    const state = useSelector((state) => state.handleCart);
-    const dispatch = useDispatch();
-    const handleClose = (item) => {
-      dispatch(delCart(item));
-    };
-
-//   onClick={() => handleClosee(cartItem)}
-
-  const cartItem = (cartItem) => {
-    return (
-        <div className="renderCard_container">
-        {cartItem.discount ? (
-          <div className="renderCard_sale">
-            <p>{cartItem.discountSale}</p>
-          </div>
-        ) : (
-          ""
-        )}
-        <div>
-            <button onClick={() => handleClose(cartItem)}> УДАЛИТЬ</button>
-        </div>
-        <div className="bestseller_icon">
-          <IconButton>
-            <Checkbox
-              icon={
-                <FavoriteBorderIcon
-                  sx={{ color: "#E5271B", fontSize: 30 }}
-                />
-              }
-              checkedIcon={
-                <FavoriteIcon sx={{ color: "#E5271B", fontSize: 30 }} />
-              }
-            />
-          </IconButton>
-        </div>
-        <div className="renderCard_block_img">
-          <img src={cartItem.img[0]} alt="" />
-        </div>
-        <div className="renderblock_info">
-          <div className="renderblock_text">
-            <Link
-              to={`/card/${cartItem.id}`}
-              className="renderblock_text_title"
-            >
-              {cartItem.title}
-            </Link>
-            <p className="renderblock_text_sale">{cartItem.sell} р</p>
-            <p className="renderblock_text_size">Размер: {cartItem.size}</p>
-          </div>
-          <div className="renderblock_color">
-            {cartItem.color
-              ? cartItem.color.map((item) => (
-                  <div
-                    className="renderblock_color_row"
-                    style={{ background: item }}
-                  ></div>
-                ))
-              : null}
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const emptyCart = () => {
-    return <p className="trach_nune"> пуста</p>;
-  };
-
-    return (
-        <div>
-            <Scroll/>
-            <section className="collection_section">
+  return (
+    <div>
+      <Scroll />
+      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
+        <Link to="/" className="breadcrumb_link">
+          Главная
+        </Link>
+        <p className="breadcrumb_links">Избранное</p>
+      </Breadcrumbs>
+      <section className="collection_section">
         <div className="collection_title">
-          <p className="collection_title_text">Коллекция</p>
-          <span className="cart-button_icon">{state.length}</span>
+          <p className="collection_title_text">Избранное</p>
+          <p className="collection_title_desrcs">
+            Товаров в избранном: {favorites.length}
+          </p>
         </div>
-
-        <div className="collection_title_btn">
-        {state.length === 0 && emptyCart()}
-        {state.length !== 0 && state.map(cartItem)}
-
+        <div className="colrender_container">
+          {favorites.length ? (
+            favorites.map((item) => (
+              <Cart product={item.product} key={item.product.id} />
+            ))
+          ) : (
+            <div>
+              <p className="collection_title_text-error">
+                У Вас пока нету избранных товаров
+              </p>
+              <p className="collection_title_text">Возможно Вас заинтересует</p>
+              <section className="collection_section_newspostss">
+                {bestseller.map((best) => (
+                  <div className="mini_card">
+                    <CartNews product={best} key={best.id} />
+                  </div>
+                ))}
+              </section>
+            </div>
+          )}
         </div>
       </section>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Favorites;

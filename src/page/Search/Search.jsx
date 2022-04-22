@@ -1,38 +1,52 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./RenCarBes.css";
+import axios from "axios";
+// MUI
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { useDispatch, useSelector } from "react-redux";
-import { addCarFav } from "../../redux/actions";
-import { getProdcutBest } from "../../redux/actions/productact";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+// COMPONENT
+import Scroll from "../../components/Scroll/Scroll";
 
-const RenCarBes = ({ game }) => {
-  const dispatch = useDispatch();
-  const addFavorite = (bestsellers) => {
-    dispatch(addCarFav(bestsellers));
-  };
-  // BESTSELLER
-  const bestseller = useSelector((state) => {
+
+const fetchData = (value) => {
+  return axios
+    .get(`http://localhost:3000/products?q=${value}`)
+    .then((response) => response.data);
+};
+
+const Search = () => {
+  // VALUE ЗАПРОС
+  const value = useSelector((state) => {
     const { productsReducer } = state;
-    return productsReducer.bestsellerlimit;
+    return productsReducer.value;
   });
-  const [limit, setLimit] = useState(4);
+  const [result, setResult] = useState([]);
   useEffect(() => {
-    dispatch(getProdcutBest(limit));
-  }, [limit]);
+    fetchData(value).then((data) => setResult(data));
+  }, [value]);
 
   return (
-    <section className="bestseller_container">
-      <div className="bestseller_title">
-        <p className="bestseller_title_text">Хит продаж</p>
+    <div>
+      <Scroll />
+      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
+        <Link to="/" className="breadcrumb_link">
+          Главная
+        </Link>
+        <p className="breadcrumb_links">Результаты поиска</p>
+      </Breadcrumbs>
+      <div className="collection_title">
+        <p className="collection_title_text">
+          Результаты поиска по запросу: {value}
+        </p>
       </div>
       <div className="render_container">
-        {bestseller.map((best) => {
+        {result.map((best, index) => {
           return (
-            <div className="renderCard_container">
+            <div className="renderCard_container" best={best} key={index}>
               {best.discount ? (
                 <div className="renderCard_sale">
                   <p>{best.discountSale}</p>
@@ -83,16 +97,14 @@ const RenCarBes = ({ game }) => {
           );
         })}
       </div>
-      <div className="bestseller_title">
-        <button
-          className="bestseller_title_btn"
-          onClick={() => setLimit(limit + 4)}
-        >
-          Еще
-        </button>
-      </div>
-    </section>
+      <section className="collection_section_news">
+        <div className="collection_title">
+          <p className="collection_title_text">Возможно Вас заинтересует</p>
+        </div>
+        {/* <News /> */}
+      </section>
+    </div>
   );
 };
 
-export default RenCarBes;
+export default Search;

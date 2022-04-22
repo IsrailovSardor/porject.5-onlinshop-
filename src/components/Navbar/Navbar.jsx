@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
+// COMPONENTS
 import logo from "../../assets/img/logo.png";
 import love from "../../assets/icon/love.svg";
-import trash from "../../assets/icon/shop.svg";
+import trashs from "../../assets/icon/shop.svg";
 import search from "../../assets/icon/search.svg";
-import "./Navbar.css";
-import { fetchDataInform } from "../data";
-import { useSelector } from "react-redux";
+import SearchInput from "../Search/SearchInput";
+// REDUX
+import { useDispatch, useSelector } from "react-redux";
+import { getProdcutInform } from "../../redux/productact";
 
 const Navbar = ({ itemsCount }) => {
-  const state = useSelector((state) => state.handleCart)
-  const states = useSelector((state) => state.handlefavor)
+  // TRASH
+  const trash = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.trash;
+  });
+  // FAVORITES
+  const favorites = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.favorites;
+  });
+
   // MOBILE
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
@@ -23,10 +35,16 @@ const Navbar = ({ itemsCount }) => {
     } else setIcon("nav__toggler");
   };
 
-  const [inform, setInform] = useState([]);
-  useEffect(() => {
-    fetchDataInform().then((data) => setInform(data));
+  // inform
+  const dispatch = useDispatch();
+  const inform = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.inform;
   });
+  useEffect(() => {
+    dispatch(getProdcutInform());
+  }, []);
+
   return (
     <div className="header_container">
       {/* MOBILE */}
@@ -115,17 +133,14 @@ const Navbar = ({ itemsCount }) => {
           </Link>
         </div>
         <div className="header_search">
-          <form className="header_input">
-            <input type="text" placeholder="Поиск" className="header_inputs" />
-            <button className="header_input_button">
-              <img src={search} alt="" />
-            </button>
-          </form>
+          <SearchInput />
           <div className="header_shops">
             <div className="header_love">
-            <div className="cart-button">
-              <img src={love} alt="love" className="search_link_icon" />
-              <span className="cart-button_icon">{states.length}</span>
+              <div className="cart-button">
+                <img src={love} alt="love" className="search_link_icon" />
+                {favorites.length ? (
+                  <span className="cart-button_icon">{favorites.length}</span>
+                ) : null}
               </div>
               <Link to="/favorites" className="search_link">
                 Избранное
@@ -134,8 +149,10 @@ const Navbar = ({ itemsCount }) => {
             <div className="header_line"> {/*line*/}</div>
             <div className="header_love">
               <div className="cart-button">
-                <img src={trash} alt="shop" className="search_link_icon" />
-                <span className="cart-button_icon">{state.length}</span>
+                <img src={trashs} alt="shop" className="search_link_icon" />
+                {trash.length ? (
+                  <span className="cart-button_icon">{trash.length}</span>
+                ) : null}
               </div>
               <Link to="/basket" className="search_link">
                 Корзина
