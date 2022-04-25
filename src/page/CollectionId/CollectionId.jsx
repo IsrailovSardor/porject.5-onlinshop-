@@ -88,7 +88,7 @@ const CollectionId = () => {
         </div>
       </section>
       <section className="collection_section_newspost">
-        <p className="collection_title_text">Новинки</p>
+        <p className="collection_title_textsss">Новинки</p>
         <div className="collection_titlesa">
           {bestseller.map((best) => (
             <div className="mini_card">

@@ -6,7 +6,7 @@ import "./News.css";
 import Scroll from "../../components/Scroll/Scroll";
 // MUI
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-
+// import Collapsible from "../../components/Collapsible/Collapsible";
 const News = () => {
   // news
   const [news, setNews] = useState([]);
@@ -41,6 +41,7 @@ const News = () => {
     }
   };
 
+
   return (
     <div className="newspage_container">
       <Scroll />
@@ -64,6 +65,7 @@ const News = () => {
           );
         })}
       </div>
+
     </div>
   );
 };

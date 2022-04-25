@@ -9,20 +9,29 @@ export function getProdcutBestLimit(page, limit) {
         })
     }
 }
-// export function getProdcutBestG ( limitg ) {
-//     return async (dispatch) => {
-//         const { data } = await axios(`http://localhost:3000/products/?_limit=${limitg}`)
-//         dispatch({ 
-//             type : "ALL_BESTSELLERLIMITG",
-//             data  
-//         })
-//     }
-// }
+export function getProdcutBestG ( page, limitq ) {
+    return async (dispatch) => {
+        const { data } = await axios(`http://localhost:3000/products?_page=${page}&_limit=${limitq}`)
+        dispatch({ 
+            type : "ALL_BESTSELLERLIMITG",
+            data  
+        })
+    }
+}
 export function getProdcutBest() {
     return async (dispatch) => {
         const { data } = await axios(`http://localhost:3000/products`)
         dispatch({
             type: "ALL_BESTSELLER",
+            data
+        })
+    }
+}
+export function getProdcutBestValue(value) {
+    return async (dispatch) => {
+        const { data } = await axios(`http://localhost:3000/products?q=${value}`)
+        dispatch({
+            type: "ALL_BESTSELLERVALUE",
             data
         })
     }
@@ -124,6 +133,16 @@ export function getProdcutSlider() {
         const { data } = await axios(`http://localhost:3000/slider`)
         dispatch({
             type: "ALL_SLIDER",
+            data
+        })
+    }
+}
+// NUMBER
+export function getProdcutNumber() {
+    return async (dispatch) => {
+        const { data } = await axios(`http://localhost:3000/nomer`)
+        dispatch({
+            type: "ALL_NUMBER",
             data
         })
     }

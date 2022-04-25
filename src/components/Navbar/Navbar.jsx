@@ -88,7 +88,7 @@ const Navbar = ({ itemsCount }) => {
           </Link>
         </div>
         <div className="mobile_love">
-          <img src={trash} alt="shop" className="mobile__links_icon" />
+          <img src={trashs} alt="shop" className="mobile__links_icon" />
           <Link to="/" className="mobile_links">
             Корзина
           </Link>

@@ -8,6 +8,7 @@ import { getCart, getFavorites, getTrash } from "../../redux/productact";
 import {
   addAndDeleteProductInFavorites,
   addAndDeleteProductInTrash,
+  deleteCart,
 } from "../../utils/utilis";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -32,17 +33,17 @@ const CartTrash = ({ product }) => {
     dispatch(getTrash());
   }, []);
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(product.count);
   useEffect(() => {
-    changeCountProduct(count, product.product.id)
-    dispatch(getCart())
+   //changeCountProduct(count, product.product.id)
+    dispatch(getTrash())
 }, [count])
   return (
     <div className="cartItem_block">
       <button
         className="cartItem_block_close"
         onClick={() => {
-          addAndDeleteProductInTrash(product.product);
+          deleteCart(product.product, product.color);
           dispatch(getTrash());
         }}
       >
@@ -81,10 +82,15 @@ const CartTrash = ({ product }) => {
           <button
             className="cartItem_btm_min"
             onClick={() => {
-              if (count <= 1) {
-                return false;
-              } else {
-                setCount(count - 1);
+                if (count <= 1)
+                { 
+                  deleteCart(product.product, product.color);
+                  dispatch(getTrash());
+               } else {
+                  setCount(prev => {
+                      addAndDeleteProductInTrash(product.product, product.color,  prev - 1);
+                      return prev - 1;
+                  });
               }
             }}
           >
@@ -93,7 +99,12 @@ const CartTrash = ({ product }) => {
           <p className="cartItem_btm_leng">{count}</p>
           <button
             className="cartItem_btm_min"
-            onClick={() => setCount(count + 1)}
+            onClick={() => {
+              setCount(prev => {
+                  addAndDeleteProductInTrash(product.product, product.color,  prev + 1);
+                  return prev + 1;
+              });
+          }}
           >
             <Pls className="cartItem_btm_min_svg" />
           </button>

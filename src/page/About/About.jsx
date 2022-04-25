@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./About.css";
+import '../../App.css'
 // MUI
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 // COMPONENTS

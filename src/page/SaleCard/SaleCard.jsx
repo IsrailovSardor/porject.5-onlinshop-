@@ -8,6 +8,7 @@ import {
   getFavorites,
   getProdcutBestId,
   getProdcutBestLimit,
+  getProdcutCollectionId,
   getTrash,
 } from "../../redux/productact";
 import {
@@ -16,7 +17,6 @@ import {
 } from "../../utils/utilis";
 // COMPONENTS
 import Scroll from "../../components/Scroll/Scroll";
-import { fetchDataCollectionId } from "../../components/data";
 import { ReactComponent as Shop } from "../../assets/icon/shop.svg";
 import CartNews from "../../components/Cart/CartNews";
 
@@ -34,10 +34,14 @@ const SaleCard = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   // collection
-  const [collection, setCollection] = useState([]);
+  // ID COL
+  const collection = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.collectionId;
+  });
   useEffect(() => {
-    fetchDataCollectionId(id).then((data) => setCollection(data));
-  }, []);
+    dispatch(getProdcutCollectionId(id));
+  }, [id]);
   // bestseller
   const bestseller = useSelector((state) => {
     const { productsReducer } = state;
@@ -85,8 +89,10 @@ const SaleCard = () => {
 
   const [zoom, setZoom] = useState(false);
   const [zomimg, setZomImg] = useState(0);
-
   const [color, setColor] = useState(0);
+
+
+
 
   return (
     <div className="salecard_container">
@@ -182,11 +188,11 @@ const SaleCard = () => {
             </div>
           </div>
           <div className="cardid_info_btn">
-            {checkInTrash ? (
+            {/* {checkInTrash ? (
               <button className="cardid_info_btn_shop" onClick={link}>
                 <span>Перейти в корзину</span>
               </button>
-            ) : (
+            ) : ( */}
               <button
                 className="cardid_info_btn_shop"
                 onClick={() => {
@@ -197,7 +203,6 @@ const SaleCard = () => {
                 <Shop width={20} height={20} className="cardid_info_btn_svg" />
                 <span>Добавить в корзину</span>
               </button>
-            )}
             <button className="cardid_info_btn_love">
               <IconButton
                 onClick={() => {
@@ -215,8 +220,8 @@ const SaleCard = () => {
           </div>
         </div>
       </div>
-      <section className="collection_section_newspost">
-        <p className="collection_title_text">Новинки</p>
+      <section className="collection_section_newspostre">
+        <p className="collection_title_textsss">Похожие товары</p>
         <div className="collection_title22">
           {news.map((best) => (
             <div className="mini_card">

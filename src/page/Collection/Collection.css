@@ -3,7 +3,7 @@
     padding: 18px 99px 40px;
 }
 
-.collection_title_text {
+.collection_title_text, .collection_title_textsss {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -35,7 +35,6 @@
     width: 44px;
     height: 44px;
     background-color: #1D1D1B;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -68,27 +67,31 @@
 .rigt_btn_pl * {
     fill: rgb(0, 0, 0);
 }
-
+/* 1 */
 @media screen and (max-width: 1300px) {
-    .collection_block {
-        padding: 0 99px;
+    .collection_section {
+        padding: 18px 99px 40px;
     }
-}
-
-@media screen and (max-width: 1100px) {
-    .collection_block {
-        padding: 0 50px;
+  }
+  
+  /* 2 */
+  @media screen and (max-width: 1100px) {
+    .collection_section {
+        padding: 16px 50px 30px;
     }
-}
-
-@media screen and (max-width: 900px) {
-    .collection_block {
-        padding: 0 30px;
+  }
+  
+  /* 3 */
+  @media screen and (max-width: 900px) {
+    .collection_section {
+        padding: 14px 30px 30px;
     }
-}
-
-@media screen and (max-width: 700px) {
-    .collection_block {
-        padding: 0 16px;
+  }
+  
+  /* 4 */
+  @media screen and (max-width: 700px) {
+    .collection_section {
+        padding: 12px 16px 20px;
     }
-}
+  }
+    

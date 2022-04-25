@@ -3,6 +3,7 @@ const inistialState = {
     bestsellerId: [],
     bestsellerlimitg: [],
     bestseller: [],
+    bestsellervalue: [],
     collectionlimit: [],
     collection: [],
     collectionId: [],
@@ -15,7 +16,8 @@ const inistialState = {
     value: "",
     trash: [],
     favorites: [],
-    cart:[]
+    cart: [],
+    nuber: []
 }
 export const productsReducer = (state = inistialState, action) => {
 
@@ -30,6 +32,11 @@ export const productsReducer = (state = inistialState, action) => {
             return {
                 ...state,
                 bestseller: action.data
+            }
+        case "ALL_BESTSELLERVALUE":
+            return {
+                ...state,
+                bestsellervaleu: action.data
             }
         case "ALL_BESTSELLERLIMITG":
             return {
@@ -110,13 +117,18 @@ export const productsReducer = (state = inistialState, action) => {
                 ...state,
                 inform: action.data
             }
-            // CART
-        case "GET_CART": 
-        return{
-            ...state,
-            cart: action.data
-        }
-
+        // CART
+        case "GET_CART":
+            return {
+                ...state,
+                cart: action.data
+            }
+// NUMBER
+case "ALL_NUMBER":
+    return {
+        ...state,
+        number: action.data
+    }
         default: return state
     }
 }

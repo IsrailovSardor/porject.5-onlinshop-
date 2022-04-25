@@ -10,9 +10,11 @@ import Scroll from "../../components/Scroll/Scroll";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getProdcutAdvantage,
+  getProdcutBestG,
   getProdcutBestLimit,
   getProdcutColLim,
 } from "../../redux/productact";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -25,6 +27,17 @@ const Header = () => {
   useEffect(() => {
     dispatch(getProdcutBestLimit(1, limit));
   }, [limit]);
+
+  // news
+  const news = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.bestsellerlimitg;
+  });
+  const [limitq, setLimitq] = useState(4);
+  useEffect(() => {
+    dispatch(getProdcutBestG(1, limitq));
+  }, [limitq]);
+
   // collection
   const collection = useSelector((state) => {
     const { productsReducer } = state;
@@ -34,6 +47,7 @@ const Header = () => {
   useEffect(() => {
     dispatch(getProdcutColLim(limits));
   }, [limits]);
+
   // advantage
   const advantage = useSelector((state) => {
     const { productsReducer } = state;
@@ -42,6 +56,7 @@ const Header = () => {
   useEffect(() => {
     dispatch(getProdcutAdvantage());
   }, []);
+
 
   return (
     <div className="home_container">
@@ -70,12 +85,17 @@ const Header = () => {
           <p className="home_container_title">Новинки</p>
         </div>
         <div className="home_container_card">
-          {bestseller.map((best) => (
-            <Cart product={best} key={best.id} />
+          {news.map((news) => (
+            <Cart product={news} key={news.id} />
           ))}
         </div>
         <div className="home_container_center">
-          <button className="home_container_btn">Ещё</button>
+          <button
+            className="home_container_btn"
+            onClick={() => setLimitq(limitq + 4)}
+          >
+            Ещё
+          </button>
         </div>
       </div>
       <div className="home_container_cart">
@@ -97,7 +117,7 @@ const Header = () => {
         </div>
       </div>
       <div className="home_container_adv">
-        <div className="home_container_card">
+        <div className="home_container_cards">
           {advantage.map((adva) => (
             <CartAdva product={adva} key={adva.id} />
           ))}

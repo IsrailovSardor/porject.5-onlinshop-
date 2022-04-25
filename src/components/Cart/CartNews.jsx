@@ -13,7 +13,7 @@ import { addAndDeleteProductInFavorites } from "../../utils/utilis";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper";
+import { Pagination } from "swiper";
 
 const CartNews = ({ product }) => {
   const dispatch = useDispatch();
@@ -57,17 +57,12 @@ const CartNews = ({ product }) => {
         </div>
         <div className="block_swiper">
           <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Autoplay]}
-            className="mySwiper"
+             spaceBetween={30}
+             pagination={{
+               clickable: true,
+             }}
+             modules={[Pagination]}
+             className="mySwiper"
           >
             {product.img
               ? product.img.map((item) => (

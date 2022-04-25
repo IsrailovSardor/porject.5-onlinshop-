@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Scroll.css";
 // COMPONENTS
@@ -19,8 +19,11 @@ function MyVerticallyCenteredModal(props) {
   // user
   const [userName, setUserName] = useState("");
   const [number, setNumber] = useState("");
+
   const handleUpdateChat = async (e) => {
     e.preventDefault();
+    setUserName(e.target.value);
+    setUserName(e.target.value);
     await axios.post(" http://localhost:3000/chat", {
       userName: userName,
       number: number,
@@ -72,6 +75,8 @@ function MyVerticallyCenteredModal(props) {
                 className="block_input"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
+                required
+                minLength={2}
               />
             </div>
             <div className="block_input_from">
@@ -82,10 +87,16 @@ function MyVerticallyCenteredModal(props) {
                 placeholder="Номер телефона"
                 className="block_input"
                 value={number}
+                minLength={10}
                 onChange={(e) => setNumber(e.target.value)}
+                required
               />
             </div>
-            <button className="block_input_btn" type="submit">
+            <button
+              type="submit"
+              className="block_input_btns"
+              disabled={!number || !userName}
+            >
               Заказать звонок
             </button>
           </form>

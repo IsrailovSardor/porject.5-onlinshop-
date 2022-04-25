@@ -23,8 +23,7 @@
       ],
       "title": "Трикотажное платье",
       "article": "2161622510-27",
-      "sell": 4599,
-      "sellNews": 500,
+      "sell": 1000,
       "discount": true,
       "discountSale": 30,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
@@ -39,34 +38,28 @@
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/1.jpg",
+        "/img/product/2.jpg",
+        "/img/product/3.jpeg",
+        "/img/product/4.jpg",
+        "/img/product/5.jpg"
       ],
       "color": [
-        "#73A39D",
         "#84CC4C",
-        "#B5A8A1",
         "#AB844A",
         "#6977F0",
-        "#D1D1D1",
         "#141414",
         "#FF0000"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
+      "title": "Шелковое платье",
+      "article": "2161684510-21",
+      "sell": 1000,
+      "discount": false,
       "discountSale": 30,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "size": "40-48",
+      "number": 2,
       "material": "Полиэстер",
       "composition": "Полиэстер",
       "bestseller": true,
@@ -75,14 +68,13 @@
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/6.jpg",
+        "/img/product/7.jpeg",
+        "/img/product/8.jpg",
+        "/img/product/9.jpg",
+        "/img/product/10.png",
+        "/img/product/11.jpg",
+        "/img/product/12.jpg"
       ],
       "color": [
         "#73A39D",
@@ -91,18 +83,17 @@
         "#AB844A",
         "#6977F0",
         "#D1D1D1",
-        "#141414",
-        "#FF0000"
+        "#141414"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
+      "title": "Bueon style Платья",
+      "article": "2161684510-20",
+      "sell": 1000,
       "discount": true,
-      "discountSale": 30,
+      "discountSale": 15,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "size": "40-48",
+      "number": 2,
       "material": "Полиэстер",
       "composition": "Полиэстер",
       "bestseller": true,
@@ -111,14 +102,12 @@
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/13.jpg",
+        "/img/product/14.jpg",
+        "/img/product/15.jpg",
+        "/img/product/16.jpg",
+        "/img/product/17.jpg",
+        "/img/product/18.jpg"
       ],
       "color": [
         "#73A39D",
@@ -126,19 +115,17 @@
         "#B5A8A1",
         "#AB844A",
         "#6977F0",
-        "#D1D1D1",
-        "#141414",
         "#FF0000"
       ],
-      "title": "Трикотажное платье",
+      "title": "Летние платье",
       "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
+      "sell": 1000,
+      "discount": false,
       "discountSale": 30,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "collection": "Платья",
       "size": "42-50",
-      "number": 4,
+      "number": 9,
       "material": "Полиэстер",
       "composition": "Полиэстер",
       "bestseller": true,
@@ -147,34 +134,25 @@
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/21.jpg",
+        "/img/product/22.jpg",
+        "/img/product/20.jpeg",
+        "/img/product/23.jpg"
       ],
       "color": [
         "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
         "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
         "#FF0000"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
+      "title": "Приталиное платье",
+      "article": "2161684510-21",
+      "sell": 1000,
+      "discount": false,
       "discountSale": 30,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "size": "40-48",
+      "number": 2,
       "material": "Полиэстер",
       "composition": "Полиэстер",
       "bestseller": true,
@@ -183,14 +161,13 @@
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/25.webp",
+        "/img/product/26.jpg",
+        "/img/product/27.jpg",
+        "/img/product/28.jpg",
+        "/img/product/29.jpg",
+        "/img/product/30.jpg",
+        "/img/product/19.jpg"
       ],
       "color": [
         "#73A39D",
@@ -198,348 +175,97 @@
         "#B5A8A1",
         "#AB844A",
         "#6977F0",
-        "#D1D1D1",
         "#141414",
         "#FF0000"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
+      "title": "Вечернее Платья",
+      "article": "2161684510-20",
+      "sell": 1000,
       "discount": true,
-      "discountSale": 30,
+      "discountSale": 5,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
       "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "size": "40-48",
+      "number": 2,
       "material": "Полиэстер",
       "composition": "Полиэстер",
       "bestseller": true,
       "latest": false,
-      "id": 1
+      "id": 6
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/kur.jpg",
+        "/img/product/kur1.jpg"
       ],
       "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
         "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
+        "#6977F0"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
+      "title": "Зимние куртки",
+      "article": "1121684510-20",
+      "sell": 12009,
+      "discount": false,
+      "discountSale": 15,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "collection": "Куртки",
+      "size": "38-50",
+      "number": 2,
       "material": "Полиэстер",
       "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 2
+      "bestseller": false,
+      "latest": true,
+      "id": 7
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/kur2.jpg",
+        "/img/product/kur3.jpg",
+        "/img/product/kur4.jpg"
       ],
       "color": [
         "#73A39D",
         "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
         "#FF0000"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
+      "title": "Зимняя куртка Gucci",
+      "article": "1121684510-18",
+      "sell": 10000,
       "discount": true,
-      "discountSale": 30,
+      "discountSale": 5,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "collection": "Куртки",
+      "size": "40-48",
+      "number": 3,
       "material": "Полиэстер",
       "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 3
+      "bestseller": false,
+      "latest": true,
+      "id": 8
     },
     {
       "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
+        "/img/product/kur5.jpg",
+        "/img/product/kur6.jpg"
       ],
       "color": [
-        "#73A39D",
         "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
+        "#AB844A"
       ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
+      "title": "Зимняя куртка LV",
+      "article": "1121684890-18",
+      "sell": 16000,
+      "discount": false,
+      "discountSale": 5,
       "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
+      "collection": "Куртки",
+      "size": "40-48",
+      "number": 2,
       "material": "Полиэстер",
       "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 4
-    },
-    {
-      "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
-      ],
-      "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
-      ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
-      "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
-      "material": "Полиэстер",
-      "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 5
-    },
-    {
-      "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
-      ],
-      "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
-      ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
-      "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
-      "material": "Полиэстер",
-      "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 1
-    },
-    {
-      "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
-      ],
-      "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
-      ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
-      "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
-      "material": "Полиэстер",
-      "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 2
-    },
-    {
-      "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
-      ],
-      "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
-      ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
-      "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
-      "material": "Полиэстер",
-      "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 3
-    },
-    {
-      "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
-      ],
-      "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
-      ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
-      "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
-      "material": "Полиэстер",
-      "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 4
-    },
-    {
-      "img": [
-        "/img/product/best1.png",
-        "/img/product/best2.png",
-        "/img/product/best3.png",
-        "/img/product/best4.png",
-        "/img/product/best5.png",
-        "/img/product/best6.png",
-        "/img/product/best7.png",
-        "/img/product/best8.png"
-      ],
-      "color": [
-        "#73A39D",
-        "#84CC4C",
-        "#B5A8A1",
-        "#AB844A",
-        "#6977F0",
-        "#D1D1D1",
-        "#141414",
-        "#FF0000"
-      ],
-      "title": "Трикотажное платье",
-      "article": "2161622510-27",
-      "sell": 4599,
-      "discount": true,
-      "discountSale": 30,
-      "descr": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
-      "collection": "Платья",
-      "size": "42-50",
-      "number": 4,
-      "material": "Полиэстер",
-      "composition": "Полиэстер",
-      "bestseller": true,
-      "latest": false,
-      "id": 5
+      "bestseller": false,
+      "latest": true,
+      "id": 9
     }
   ],
   "collection": [
@@ -559,39 +285,39 @@
       "id": 3
     },
     {
-      "img": "/img/collection/colec5.png",
-      "title": "Джинсы",
+      "img": "/img/collection/kurt.jpg",
+      "title": "Куртки Bounce",
       "id": 4
     },
     {
-      "img": "/img/collection/colec4.png",
-      "title": "Коллекция лето 2020",
+      "img": "/img/collection/colec5.png",
+      "title": "Коллекция зима 2022",
       "id": 5
     },
     {
-      "img": "/img/collection/colec5.png",
-      "title": "Коллекция лето 2020",
+      "img": "/img/collection/colec6.png",
+      "title": "Коллекция весна 2022",
       "id": 6
     },
     {
-      "img": "/img/collection/colec2.png",
-      "title": "Коллекция осень 2020",
+      "img": "/img/collection/colec7.png",
+      "title": "Коллекция лето 2022",
       "id": 7
     },
     {
-      "img": "/img/collection/colec3.png",
-      "title": "Коллекция зима 2020",
+      "img": "/img/collection/colec8.png",
+      "title": "Коллекция осень 2022",
       "id": 8
     },
     {
       "img": "/img/collection/colec4.png",
-      "title": "Юбки",
-      "id": 7
+      "title": "Море 2023",
+      "id": 9
     },
     {
-      "img": "/img/collection/colec1.png",
-      "title": "Джинсы",
-      "id": 8
+      "img": "/img/collection/kurt.jpg",
+      "title": "Куртки Bounce",
+      "id": 10
     }
   ],
   "chat": [
@@ -680,8 +406,8 @@
   },
   "informat": {
     "logo": "/img/logo.png",
-    "number1": "+ 996502000000",
-    "number2": "+ 996700200700",
+    "number1": "+996502000000",
+    "number2": "+996700200700",
     "mail": "example@mail.ru",
     "wat": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
     "inst": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
@@ -764,6 +490,122 @@
       "title": "Акции и бонусы для покупателей",
       "text": "Промокоды со скидками для постоянных клиентов, акции на новые позиции",
       "id": 4
+    }
+  ],
+  "sale": [
+    {
+      "lastName": "ыыв",
+      "number": "ыыв",
+      "firstName": "ыыв",
+      "email": "ыыв",
+      "country": "ыыв",
+      "city": "ыыв",
+      "id": 1
+    },
+    {
+      "lastName": "фывфы",
+      "number": "вфывф",
+      "firstName": "вфывфы",
+      "email": "вфывфы",
+      "country": "вфвф",
+      "city": "ывфыыы",
+      "id": 2
+    },
+    {
+      "lastName": "asd",
+      "number": "dasd",
+      "firstName": "asd",
+      "email": "sad",
+      "country": "asd",
+      "city": "as",
+      "id": 3
+    },
+    {
+      "lastName": "sad",
+      "number": "as",
+      "firstName": "asd",
+      "email": "asd",
+      "country": "asd",
+      "city": "asd",
+      "id": 4
+    },
+    {
+      "lastName": "asd",
+      "number": "dasd",
+      "firstName": "asd",
+      "email": "asd",
+      "country": "asd",
+      "city": "as",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "lastName": "фыв",
+      "number": "фыв",
+      "firstName": "фывфы",
+      "email": "вфыв",
+      "country": "фывф",
+      "city": "фыв",
+      "id": 7
+    },
+    {
+      "lastName": "l",
+      "number": "5",
+      "firstName": "5",
+      "email": "4",
+      "country": "5",
+      "city": "'",
+      "id": 8
+    },
+    {
+      "lastName": "asd",
+      "number": "dsa",
+      "firstName": "asd",
+      "email": "dsa",
+      "country": "dsa",
+      "city": "dsa",
+      "id": 9
+    },
+    {
+      "lastName": "asdsa",
+      "number": "5",
+      "firstName": "dsadsa",
+      "email": "dasd",
+      "country": "sadasdsd",
+      "city": "sadsad",
+      "id": 10
+    },
+    {
+      "lastName": "sad",
+      "number": "0",
+      "firstName": "s",
+      "email": "s",
+      "country": "s",
+      "city": "ss",
+      "id": 11
+    },
+    {
+      "lastName": "s",
+      "number": "0502772777",
+      "firstName": "s",
+      "email": "sdsadsadSD@mail.ru",
+      "country": "s",
+      "city": "s",
+      "id": 12
+    }
+  ],
+  "nomer": [
+    {
+      "id": 1,
+      "img": "/img/number/kg.png",
+      "text": "+996"
+    },
+    {
+      "id": 2,
+      "img": "/img/number/ru.webp",
+      "text": "+7 "
     }
   ]
 }

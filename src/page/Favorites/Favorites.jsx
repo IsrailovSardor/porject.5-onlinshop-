@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import "./Favorites.css";
 // COMPONENTS
 import Scroll from "../../components/Scroll/Scroll";
 import Cart from "../../components/Cart/Cart";
@@ -40,32 +41,32 @@ const Favorites = () => {
         </Link>
         <p className="breadcrumb_links">Избранное</p>
       </Breadcrumbs>
-      <section className="collection_section">
-        <div className="collection_title">
+      <section className="collection_sectionm">
+        <div className="collection_titlenn">
           <p className="collection_title_text">Избранное</p>
           <p className="collection_title_desrcs">
             Товаров в избранном: {favorites.length}
           </p>
         </div>
-        <div className="colrender_container">
+        <div className="collection_titlen">
           {favorites.length ? (
             favorites.map((item) => (
               <Cart product={item.product} key={item.product.id} />
             ))
           ) : (
-            <div>
+            <section className="collection_section_newsposts">
               <p className="collection_title_text-error">
                 У Вас пока нету избранных товаров
               </p>
               <p className="collection_title_text">Возможно Вас заинтересует</p>
-              <section className="collection_section_newspostss">
+              <div className="collection_titlesa">
                 {bestseller.map((best) => (
                   <div className="mini_card">
                     <CartNews product={best} key={best.id} />
                   </div>
                 ))}
-              </section>
-            </div>
+              </div>
+            </section>
           )}
         </div>
       </section>
