@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import search from "../../assets/icon/search.svg";
 import "./SearchInput.css";
 
-const SearchInput = () => {
+const SearchMobile = () => {
   // bestseller
   const dispatch = useDispatch();
   const bestseller = useSelector((state) => {
@@ -50,7 +50,8 @@ const SearchInput = () => {
   };
 
   return (
-    <form className="header_input" onSubmit={link}>
+      <div className="mobile_search">
+          <form className="header_inputq" onSubmit={link}>
       <input
         type="text"
         placeholder="Поиск"
@@ -60,12 +61,12 @@ const SearchInput = () => {
         onClick={inputClickHandlerr}
         onBlur={() => setTimeout(() => setIsOpen(false), 1000)}
       />
-      <ul className="autoComplete">
+      <ul className="autoCompleteq">
         {value && isOpen
           ? filterCard.map((best) => {
               return (
-               <li className="autoCompItem">
-                 <Link to={`/card/${best.id}`} className="linkcompitem" onClick={itemClickCard}>
+               <li className="autoCompItemq">
+                 <Link to={`/card/${best.id}`} className="linkcompitemq" onClick={itemClickCard}>
                   {best.title} 
                 </Link>
                </li> 
@@ -76,8 +77,10 @@ const SearchInput = () => {
       <button className="header_input_button" type="submit">
         <img src={search} alt="" />
       </button>
-    </form>
+    </form> 
+      </div>
+   
   );
 };
 
-export default SearchInput;
+export default SearchMobile;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Right } from "../../assets/icon/right.svg";
 const Counris = ({ countries }) => {
   return (
-    <div className="colrender_container">
+    <div className="collection_render_card">
       {countries.map((countries, i) => (
         <div className="renderCardColl_container">
           <div className="rendColl_card_block">
@@ -13,7 +13,7 @@ const Counris = ({ countries }) => {
           <div className="rendColl_card_form">
             <Link
               className="rendColl_card_btn"
-              to={`/collectionId/${countries.id}`}
+              to={`/collectionProducts/${countries.id}`}
             >
               Смотреть все
               <Right className="rendColl_card_icon" />

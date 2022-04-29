@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./News.css";
 // COMPONENTS
@@ -41,31 +41,62 @@ const News = () => {
     }
   };
 
+  const [modeMob, setModeMob] = useState(false);
+  const handleModeHide = () => {
+    setModeMob(false);
+  };
+  const handleModeShow = () => {
+    setModeMob(true);
+  };
 
   return (
     <div className="newspage_container">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="breadcrumb" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">Новости</p>
+        <p className="crumbs_link2">Новости</p>
       </Breadcrumbs>
-      <div className="newspage_block">
-        <p className="newspage_block_tetsa">Новости</p>
+      <section className="collection_section">
+        <p className="interesting_title">Новости</p>
         {news.map((news, index) => {
           return (
-            <div className="newspage_card" key={index}>
-              <img src={news.img} alt="" className="newspage_card_img" />
+            <div className="news_card_render" key={index}>
+              <img src={news.img} alt="" className="card_render_img" />
               <div>
-                <p className="newspage_card_title">{news.title}</p>
-                <p className="newspage_card_descr">{news.text}</p>
+                <p className="card_render_title">{news.title}</p>
+                <p className="card_render_descr">{news.text}</p>
+                {modeMob ? (
+                  <div className="text_block_mobile">
+                    <div className="text-hide">
+                      <p className="card_render_descrs">{news.text}</p>
+                    </div>
+                    <button
+                      onClick={handleModeHide}
+                      className="btn-mobile_show"
+                    >
+                      Показать
+                    </button>
+                  </div>
+                ) : (
+                  <div className="text_block_mobile">
+                    <div>
+                      <p className="card_render_descrs">{news.text}</p>
+                    </div>
+                    <button
+                      onClick={handleModeShow}
+                      className="btn-mobile_show"
+                    >
+                      Скрыть
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           );
         })}
-      </div>
-
+      </section>
     </div>
   );
 };

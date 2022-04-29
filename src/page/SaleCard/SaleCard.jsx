@@ -9,11 +9,11 @@ import {
   getProdcutBestId,
   getProdcutBestLimit,
   getProdcutCollectionId,
-  getTrash,
+  getbasket,
 } from "../../redux/productact";
 import {
   addAndDeleteProductInFavorites,
-  addAndDeleteProductInTrash,
+  addAndDeleteProductInbasket,
 } from "../../utils/utilis";
 // COMPONENTS
 import Scroll from "../../components/Scroll/Scroll";
@@ -70,19 +70,21 @@ const SaleCard = () => {
   let checkInFavoritess = favorites.some(
     (item) => item.product.id === bestseller.id
   );
-  // trash
-  const trash = useSelector((state) => {
+  // basket
+  const basket = useSelector((state) => {
     const { productsReducer } = state;
-    return productsReducer.trash;
+    return productsReducer.basket;
   });
   useEffect(() => {
-    dispatch(getTrash());
+    dispatch(getbasket());
   }, []);
-  let checkInTrash = trash.some((items) => items.product.id === bestseller.id);
+  let checkInbasket = basket.some(
+    (items) => items.product.id === bestseller.id
+  );
   // naviget
   const naviget = useNavigate();
   const link = () => {
-    if (trash) {
+    if (basket) {
       naviget("/basket");
     }
   };
@@ -91,143 +93,156 @@ const SaleCard = () => {
   const [zomimg, setZomImg] = useState(0);
   const [color, setColor] = useState(0);
 
-
-
-
   return (
-    <div className="salecard_container">
+    <div className="wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="Breadcrumbs" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <Link to="/collection" className="breadcrumb_link">
+        <Link to="/collection" className="crumbs_link1">
           Коллекция
         </Link>
-        <Link to={`/collectionId/${id}`} className="breadcrumb_link">
+        <Link to={`/collectionProducts/${id}`} className="crumbs_link1">
           {collection.title}
         </Link>
-        <p className="breadcrumb_links">{bestseller.title}</p>
+        <p className="crumbs_link2">{bestseller.title}</p>
       </Breadcrumbs>
-      <div className="cardid_container">
-        <div className="cardid_img_block">
-          {bestseller.img
-            ? bestseller.img.map((item, index) => (
+      <section className="sallCard_container">
+        <div className="sallCard_block">
+          <div className="sallCard_img">
+            {bestseller.img
+              ? bestseller.img.map((item, index) => (
+                  <img
+                    src={item}
+                    alt=""
+                    className="img_block_img"
+                    key={index}
+                    onClick={() => {
+                      setZoom(true);
+                      setZomImg(index);
+                    }}
+                  />
+                ))
+              : null}
+            {zoom ? (
+              <div className="modal_img-zoom" onClick={() => setZoom(false)}>
                 <img
-                  src={item}
+                  src={bestseller.img[zomimg]}
                   alt=""
-                  className="img_block_img"
-                  key={index}
-                  onClick={() => {
-                    setZoom(true);
-                    setZomImg(index);
-                  }}
+                  className="modal_img_img"
                 />
-              ))
-            : null}
-          {zoom ? (
-            <div className="modal_img-zoom" onClick={() => setZoom(false)}>
-              <img
-                src={bestseller.img[zomimg]}
-                alt=""
-                className="modal_img_img"
-              />
-            </div>
-          ) : null}
-        </div>
-        <div className="cardid_info_block">
-          <div className="cardid_info_text">
-            <p className="info_block_opis">{bestseller.title}</p>
-            <div className="info_block_flex">
-              <p className="info_block_title">Артикул:</p>
-              <p className="info_block_descr">{bestseller.article}</p>
-            </div>
-            <div className="info_block_flex">
-              <p className="info_block_title">Цвет :</p>
-              <div className="news_colorsss">
-                {bestseller.color
-                  ? bestseller.color.map((item, index) => (
-                      <div
-                        className="renderblock_color_row"
-                        style={{ background: item }}
-                        onClick={() => setColor(index)}
-                        key={index}
-                      ></div>
-                    ))
-                  : null}
               </div>
-            </div>
-            <div className="info_block_flex">
-              <p className="info_block_title_sale">{bestseller.sell} р</p>
-            </div>
-            <div>
-              <p className="info_block_title">О товаре: </p>
-              <p className="info_block_descr_about">{bestseller.descr}</p>
-            </div>
-            <div className="info_block_flex_js">
-              <div>
-                <div className="info_block_flex">
-                  <p className="info_block_title">Размерный ряд: </p>
-                  <p className="info_block_descr">{bestseller.size}</p>
-                </div>
-                <div className="info_block_flex">
-                  <p className="info_block_title">Количество в линейке: </p>
-                  <p className="info_block_descr">{bestseller.number}</p>
+            ) : null}
+          </div>
+          <div className="sallCard_price">
+            <div className="sallCard_information">
+              <p className="information_title">{bestseller.title}</p>
+              <p className="information_descr">
+                Артикул:
+                <span className="information_span">{bestseller.article}</span>
+              </p>
+              <div className="information_color">
+                <p className="information_descr">Цвет :</p>
+                <div className="information_colors">
+                  {bestseller.color
+                    ? bestseller.color.map((item, index) => (
+                        <div
+                          className={
+                            color === index ? "renderborder" : "renderrow"
+                          }
+                          // style={{ background: item }}
+                          onClick={() => setColor(index)}
+                          key={index}
+                        >
+                          <div
+                            className="renderblock_color_row"
+                            style={{ background: item }}
+                            onClick={() => setColor(index)}
+                            key={index}
+                          ></div>
+                        </div>
+                      ))
+                    : null}
                 </div>
               </div>
-              <div>
-                <div className="info_block_flex">
-                  <p className="info_block_title">Состав ткани: </p>
-                  <p className="info_block_descr">{bestseller.composition} </p>
+              <p className="information_sale">{bestseller.sell} р</p>
+              <p className="information_descr">О товаре:</p>
+              <p className="information_span_about">{bestseller.descr}</p>
+              <div className="information_color_js">
+                <div>
+                  <p className="information_descr">
+                    Размерный ряд:
+                    <span className="information_span">{bestseller.size}</span>
+                  </p>
+                  <p className="information_descr">
+                    Количество в линейке:
+                    <span className="information_span">
+                      {bestseller.number}
+                    </span>
+                  </p>
                 </div>
-                <div className="info_block_flex">
-                  <p className="info_block_title">Материал: </p>
-                  <p className="info_block_descr">{bestseller.material} </p>
+                <div>
+                  <p className="information_descr">
+                    Состав ткани:
+                    <span className="information_span">
+                      {bestseller.composition}
+                    </span>
+                  </p>
+                  <p className="information_descr">
+                    Материал:{" "}
+                    <span className="information_span">
+                      {bestseller.material}
+                    </span>
+                  </p>
                 </div>
               </div>
+            </div>
+            <div className="sallCard_button">
+              {checkInbasket ? (
+                <button className="sallCard_button_shop" onClick={link}>
+                  <span>Перейти в корзину</span>
+                </button>
+              ) : (
+                <button
+                  className="sallCard_button_shop"
+                  onClick={() => {
+                    addAndDeleteProductInbasket(bestseller, color);
+                    dispatch(getbasket());
+                  }}
+                >
+                  <Shop
+                    width={20}
+                    height={20}
+                    className="sallCard_button_svg"
+                  />
+                  <span>Добавить в корзину</span>
+                </button>
+              )}
+              <button className="sallCard_button_love">
+                <IconButton
+                  onClick={() => {
+                    addAndDeleteProductInFavorites(bestseller);
+                    dispatch(getFavorites());
+                  }}
+                >
+                  {checkInFavoritess ? (
+                    <FavoriteIcon sx={{ color: "white" }} />
+                  ) : (
+                    <FavoriteBorderIcon sx={{ color: "white" }} />
+                  )}
+                </IconButton>
+              </button>
             </div>
           </div>
-          <div className="cardid_info_btn">
-            {/* {checkInTrash ? (
-              <button className="cardid_info_btn_shop" onClick={link}>
-                <span>Перейти в корзину</span>
-              </button>
-            ) : ( */}
-              <button
-                className="cardid_info_btn_shop"
-                onClick={() => {
-                  addAndDeleteProductInTrash(bestseller, color);
-                  dispatch(getTrash());
-                }}
-              >
-                <Shop width={20} height={20} className="cardid_info_btn_svg" />
-                <span>Добавить в корзину</span>
-              </button>
-            <button className="cardid_info_btn_love">
-              <IconButton
-                onClick={() => {
-                  addAndDeleteProductInFavorites(bestseller);
-                  dispatch(getFavorites());
-                }}
-              >
-                {checkInFavoritess ? (
-                  <FavoriteIcon sx={{ color: "white" }} />
-                ) : (
-                  <FavoriteBorderIcon sx={{ color: "white" }} />
-                )}
-              </IconButton>
-            </button>
-          </div>
         </div>
-      </div>
-      <section className="collection_section_newspostre">
-        <p className="collection_title_textsss">Похожие товары</p>
-        <div className="collection_title22">
-          {news.map((best) => (
-            <div className="mini_card">
+        <div className="interesting_container">
+          <p className="interesting_title">Похожие товары</p>
+          <div className="collection_render">
+            {news.map((best) => (
               <CartNews product={best} key={best.id} />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>

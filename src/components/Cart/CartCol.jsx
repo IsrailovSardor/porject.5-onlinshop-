@@ -12,7 +12,7 @@ const CartCol = ({product}) => {
         <div className="rendColl_card_form">
           <Link
             className="rendColl_card_btn"
-            to={`/collectionId/${product.id}`}
+            to={`/collectionProducts/${product.id}`}
           >
             Смотреть все
             <Right className="rendColl_card_icon" />

@@ -18,7 +18,9 @@
 }
 
 .public_block {
+    margin-top: 15px;
     padding: 16px;
+    background-color: white;
 }
 
 .public_descr {
@@ -28,7 +30,6 @@
     font-size: 14px;
     line-height: 165%;
     color: #5B5B5B;
-    margin-top: 15px;
 }
 @media screen and (max-width: 1300px) {
     .public_const {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./About.css";
-import '../../App.css'
+import "../../App.css";
 // MUI
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 // COMPONENTS
@@ -22,29 +22,29 @@ const About = () => {
   }, []);
 
   return (
-    <div className="aboutMe_container">
+    <div className="wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="Breadcrumbs" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">О нас</p>
+        <p className="crumbs_link2">О нас</p>
       </Breadcrumbs>
-      <div className="aboutMe_block">
-        <div className="aboutMe_block_img">
-          <div className="aboutMe_block_imgOne">
-            <img src={about.img1} alt="" className="block_imgOne" />
-            <img src={about.img2} alt="" className="block_imgOne" />
+      <section className="about_wrapper">
+        <div className="about_section_img">
+          <div className="about_block_img1">
+            <img src={about.img1} alt="" className="block_img1" />
+            <img src={about.img2} alt="" className="block_img1" />
           </div>
-          <div className="aboutMe_block_imgTwo">
-            <img src={about.img3} alt="" className="block_imgOne" />
+          <div className="about_block_img2">
+            <img src={about.img3} alt="" className="block_img1" />
           </div>
         </div>
-        <div className="aboutMe_block_text">
+        <div className="about_section_text">
           <p className="block_text_title">О нас</p>
-          <p className="block_text_text">{about.text}</p>
+          <p className="block_text_descr">{about.text}</p>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

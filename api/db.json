@@ -325,6 +325,121 @@
       "userName": "Sardor",
       "number": "+996502772777",
       "id": 1
+    },
+    {
+      "userName": "vg",
+      "number": "4464645656",
+      "id": 2
+    },
+    {
+      "userName": "gughugh",
+      "number": "4545454545",
+      "id": 3
+    },
+    {
+      "userName": "asdsa",
+      "number": "78945612411414",
+      "id": 4
+    },
+    {
+      "userName": "sadasd",
+      "number": "74744444444444",
+      "id": 5
+    },
+    {
+      "userName": "sadasdsadsadsad",
+      "number": "44444444444444",
+      "id": 6
+    },
+    {
+      "userName": "sadas",
+      "number": "1111111111111111111111111111",
+      "id": 7
+    },
+    {
+      "userName": "sasssssssssssssss",
+      "number": "222222222222222222222222",
+      "id": 8
+    },
+    {
+      "userName": "sadsadsadsad",
+      "number": "1111111111111111111111",
+      "id": 9
+    },
+    {
+      "userName": "dsadsadsadsad",
+      "number": "2222222222222222222",
+      "id": 10
+    },
+    {
+      "userName": "sssssssssssssss",
+      "number": "2222222222222222222222222",
+      "id": 11
+    },
+    {
+      "userName": "asdsadsa",
+      "number": "455454445454554",
+      "id": 12
+    },
+    {
+      "userName": "sadasdsadasd",
+      "number": "1111111111111111111111111111",
+      "id": 13
+    },
+    {
+      "userName": "sadsadas",
+      "number": "1111111111111111111111111111111",
+      "id": 14
+    },
+    {
+      "userName": "222222222222222222",
+      "number": "2222222222222222222",
+      "id": 15
+    },
+    {
+      "userName": "222222222222222",
+      "number": "2222222222222222222222",
+      "id": 16
+    },
+    {
+      "userName": "111111111111111111111111111",
+      "number": "11111111111111111111111111111",
+      "id": 17
+    },
+    {
+      "userName": "2222222222222222222222",
+      "number": "222222222222222222222222",
+      "id": 18
+    },
+    {
+      "userName": "ssssssssssssssssssss",
+      "number": "11111111111111111111111111",
+      "id": 19
+    },
+    {
+      "userName": "11111111111111111111",
+      "number": "11111111111111111111111",
+      "id": 20
+    },
+    {
+      "userName": "2222222222222222222222",
+      "number": "222222222222222222222",
+      "id": 21
+    },
+    {
+      "userName": "11111111111111",
+      "number": "111111111111111111111",
+      "id": 22
+    },
+    {
+      "userName": "11111111111111",
+      "number": "111111111111111111111111",
+      "id": 23
+    },
+    {
+      "userName": "bhyuh",
+      "number": "99754594949",
+      "id": 24
     }
   ],
   "newspost": [
@@ -406,8 +521,8 @@
   },
   "informat": {
     "logo": "/img/logo.png",
-    "number1": "+996502000000",
-    "number2": "+996700200700",
+    "number1": "+996 502 000 000",
+    "number2": "+996 700 200 700",
     "mail": "example@mail.ru",
     "wat": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
     "inst": "https://www.youtube.com/watch?v=uRoJJKJMbXQ",
@@ -462,9 +577,18 @@
     ]
   },
   "slider": [
-    "/img/carousel/caros.png",
-    "/img/carousel/caros.png",
-    "/img/carousel/caros.png"
+    {
+      "img": "/img/carousel/caros.png",
+      "link": "https://trello.com/b/ZKVsBE12/zeon-front?filter=member:sardor09062001"
+    },
+    {
+      "img": "/img/carousel/caros.png",
+      "link": "https://trello.com/b/ZKVsBE12/zeon-front?filter=member:sardor09062001"
+    },
+    {
+      "img": "/img/carousel/caros.png",
+      "link": "https://trello.com/b/ZKVsBE12/zeon-front?filter=member:sardor09062001"
+    }
   ],
   "advantage": [
     {
@@ -594,6 +718,150 @@
       "country": "s",
       "city": "s",
       "id": 12
+    },
+    {
+      "lastName": "byb",
+      "number": "5665464555",
+      "firstName": "by",
+      "email": "byb@t7f.ft7",
+      "country": "ihiih",
+      "city": "hyih",
+      "id": 13
+    },
+    {
+      "lastName": "asdasd",
+      "number": "544545454545454",
+      "firstName": "sadasd",
+      "email": "sDaD@mail.ru",
+      "country": "sad",
+      "city": "asd",
+      "id": 14
+    },
+    {
+      "lastName": "asDsadas",
+      "number": "485261475612451",
+      "firstName": "dsadasdasd",
+      "email": "asdA@ma.r",
+      "country": "dasdasd",
+      "city": "asdasdsa",
+      "id": 15
+    },
+    {
+      "lastName": "asdasd",
+      "number": "7456321485230",
+      "firstName": "asdas",
+      "email": "sadsad@ma",
+      "country": "asd",
+      "city": "asdasda",
+      "id": 16
+    },
+    {
+      "lastName": "asdsad",
+      "number": "7416235462165",
+      "firstName": "asdasdas",
+      "email": "dasd@mail.sda",
+      "country": "sadasda",
+      "city": "asdasdasd",
+      "id": 17
+    },
+    {
+      "lastName": "sadasdasd",
+      "number": "479865230653",
+      "firstName": "sadsadasd",
+      "email": "asdsada@mailas.sad",
+      "country": "asdasdsa",
+      "city": "dasdasdas",
+      "id": 18
+    },
+    {
+      "lastName": "dasdsad",
+      "number": "894651230489651",
+      "firstName": "asdasdsa",
+      "email": "sasas@mail.re",
+      "country": "фвыфв",
+      "city": "фывы",
+      "id": 19
+    },
+    {
+      "lastName": "adsd",
+      "number": "78463524865",
+      "firstName": "asdasd",
+      "email": "dsadaA@mail.ru",
+      "country": "dsad",
+      "city": "sadsa",
+      "id": 20
+    },
+    {
+      "lastName": "adsadsa",
+      "number": "8465236513",
+      "firstName": "dasdasd",
+      "email": "asd@as.r",
+      "country": "sadadsa",
+      "city": "sadsad",
+      "id": 21
+    },
+    {
+      "lastName": "asd",
+      "number": "984652349865",
+      "firstName": "asdasd",
+      "email": "sad@sa.d",
+      "country": "dasd",
+      "city": "asdas",
+      "id": 22
+    },
+    {
+      "lastName": "asdsad",
+      "number": "984651327452",
+      "firstName": "asdasd",
+      "email": "sad@mail",
+      "country": "asdasd",
+      "city": "asdasd",
+      "id": 23
+    },
+    {
+      "lastName": "asdas",
+      "number": "7845623105",
+      "firstName": "dasdsad",
+      "email": "Adasd@ma",
+      "country": "asdasda",
+      "city": "asdasdasdasd",
+      "id": 24
+    },
+    {
+      "lastName": "asd",
+      "number": "741085296341",
+      "firstName": "asdasd",
+      "email": "sadasd@ma",
+      "country": "asdasd",
+      "city": "asdasd",
+      "id": 25
+    },
+    {
+      "lastName": "asd",
+      "number": "74108527410",
+      "firstName": "sadsadasd",
+      "email": "asd@ma.r",
+      "country": "sadasd",
+      "city": "asdasd",
+      "id": 26
+    },
+    {
+      "lastName": "sdAD",
+      "number": "111111111111111",
+      "firstName": "adsadasd",
+      "email": "11sad@ss",
+      "country": "sadas",
+      "city": "dasdsad",
+      "id": 27
+    },
+    {
+      "lastName": "bu",
+      "number": "11111111111111111111111111111",
+      "firstName": "by",
+      "email": "by@sa",
+      "country": "byb",
+      "city": "by",
+      "id": 28
     }
   ],
   "nomer": [

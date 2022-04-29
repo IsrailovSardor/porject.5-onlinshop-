@@ -23,11 +23,11 @@ const Public = () => {
   return (
     <div className="public_container">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="Breadcrumbs" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">Публичная оферта</p>
+        <p className="crumbs_link2">Публичная оферта</p>
       </Breadcrumbs>
       <div className="public_const">
         <p className="public_title">Публичная оферта </p>

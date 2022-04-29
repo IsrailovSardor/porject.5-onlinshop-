@@ -1,50 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+.collection_wrapper {
+    width: 100%;
+    height: auto;
+}
 .collection_section {
     width: 100%;
     padding: 18px 99px 40px;
 }
 
-.collection_title_text, .collection_title_textsss {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    color: #393939;
-    margin-bottom: 12px;
-}
-
-.colrender_container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.collection_title_btn {
+.collection_pagination {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
 }
-
-.btn_plag {
-    display: flex;
-}
-
-.btn_block_plaf {
-    width: 44px;
-    height: 44px;
-    background-color: #1D1D1B;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    margin-right: 10px;
-}
-
-.next_btn {
+.pagination_next {
     width: 44px;
     height: 44px;
     margin-right: 10px;
@@ -55,18 +25,44 @@
     justify-content: center;
 }
 
-.next_btn:last-child {
+.pagination_next:last-child {
     margin-right: 0;
 }
-
-.rigt_btn_pl {
+.pagination_svg {
     height: 18px;
     width: 10px;
 }
 
-.rigt_btn_pl * {
+.pagination_svg * {
     fill: rgb(0, 0, 0);
 }
+
+.button_pagination {
+    display: flex;
+}
+
+.button_pagination_render {
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-right: 10px;
+    border: none;
+}
+.button_pagination_render_active {
+    background-color: black;
+    color: white;
+}
+.button_pagination_render:focus {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 /* 1 */
 @media screen and (max-width: 1300px) {
     .collection_section {

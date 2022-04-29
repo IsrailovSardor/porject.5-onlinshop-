@@ -6,10 +6,13 @@ const Pagin = ({ countriesPerPage, totalCounris, paginate }) => {
     pageNumber.push(i);
   }
   return (
-    <div className="btn_plag">
+    <div className="button_pagination">
       {pageNumber.map((nubmer) => (
-        <div key={nubmer} className="btn_block">
-          <button onClick={() => paginate(nubmer)} className="btn_block_plaf">
+        <div key={nubmer} className="button_pagination_block">
+          <button
+            onClick={() => paginate(nubmer)} 
+            className="button_pagination_render active"
+          >
             {nubmer}
           </button>
         </div>

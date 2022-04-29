@@ -4,18 +4,20 @@ import "./Navbar.css";
 // COMPONENTS
 import logo from "../../assets/img/logo.png";
 import love from "../../assets/icon/love.svg";
-import trashs from "../../assets/icon/shop.svg";
+import baskets from "../../assets/icon/shop.svg";
 import search from "../../assets/icon/search.svg";
+import close from "../../assets/icon/close.svg";
 import SearchInput from "../Search/SearchInput";
 // REDUX
 import { useDispatch, useSelector } from "react-redux";
 import { getProdcutInform } from "../../redux/productact";
+import SearchMobile from "../Search/SearchMobile";
 
 const Navbar = ({ itemsCount }) => {
-  // TRASH
-  const trash = useSelector((state) => {
+  // basket
+  const basket = useSelector((state) => {
     const { productsReducer } = state;
-    return productsReducer.trash;
+    return productsReducer.basket;
   });
   // FAVORITES
   const favorites = useSelector((state) => {
@@ -45,6 +47,13 @@ const Navbar = ({ itemsCount }) => {
     dispatch(getProdcutInform());
   }, []);
 
+  const [mobileSearch, setMobileSearch] = useState(false);
+  const handleMobileSearchHide = () => {
+    setMobileSearch(false);
+  };
+  const handleMobileSearchShow = () => {
+    setMobileSearch(true);
+  };
   return (
     <div className="header_container">
       {/* MOBILE */}
@@ -54,11 +63,23 @@ const Navbar = ({ itemsCount }) => {
           <div className="line2"></div>
           <div className="line3"></div>
         </div>
-        <img src={logo} alt="logo" className="mobile_logo" />
-        <button className="mobile_seacr">
-          <img src={search} alt="" className="mobile_img" />
-          <span className="cart-button">20</span>
-        </button>
+        <Link to="/">
+          <img src={logo} alt="logo" className="mobile_logo" />
+        </Link>
+        {mobileSearch ? (
+          <button className="mobile_seacr" onClick={handleMobileSearchHide}>
+            <img src={close} alt="" className="mobile_img" />
+          </button>
+        ) : (
+          <button className="mobile_seacr" onClick={handleMobileSearchShow}>
+            <img src={search} alt="" className="mobile_img" />
+          </button>
+        )}
+        {mobileSearch ? (
+          <div className="mobile_seacrhh">
+            <SearchMobile />
+          </div>
+        ) : null}
       </div>
       <div className={active}>
         <div className="mobile_one">
@@ -70,26 +91,30 @@ const Navbar = ({ itemsCount }) => {
           </div>
         </div>
         <div className="mobile_link">
-          <Link to="/about" className="mobile_links_text">
+          <Link to="/about" onClick={navToggle} className="mobile_links_text">
             О нас
           </Link>
-          <Link to="/collection" className="mobile_links_text">
+          <Link
+            to="/collection"
+            onClick={navToggle}
+            className="mobile_links_text"
+          >
             Коллекции
           </Link>
-          <Link to="/news" className="mobile_links_text">
+          <Link to="/news" onClick={navToggle} className="mobile_links_text">
             Новости
           </Link>
         </div>
         <div className="mobile_line"></div>
         <div className="mobile_love">
           <img src={love} alt="love" className="mobile__links_icon" />
-          <Link to="/" className="mobile_links">
+          <Link to="/favorites" onClick={navToggle} className="mobile_links">
             Избранное
           </Link>
         </div>
         <div className="mobile_love">
-          <img src={trashs} alt="shop" className="mobile__links_icon" />
-          <Link to="/" className="mobile_links">
+          <img src={baskets} alt="shop" className="mobile__links_icon" />
+          <Link to="/basket" onClick={navToggle} className="mobile_links">
             Корзина
           </Link>
         </div>
@@ -149,9 +174,9 @@ const Navbar = ({ itemsCount }) => {
             <div className="header_line"> {/*line*/}</div>
             <div className="header_love">
               <div className="cart-button">
-                <img src={trashs} alt="shop" className="search_link_icon" />
-                {trash.length ? (
-                  <span className="cart-button_icon">{trash.length}</span>
+                <img src={baskets} alt="shop" className="search_link_icon" />
+                {basket.length ? (
+                  <span className="cart-button_icon">{basket.length}</span>
                 ) : null}
               </div>
               <Link to="/basket" className="search_link">

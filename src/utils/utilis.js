@@ -13,47 +13,30 @@ export const addAndDeleteProductInFavorites = (product) => {
 }
 
 export const deleteCart = (product, color) => {
-    let trash = JSON.parse(localStorage.getItem('trash'))
+    let basket = JSON.parse(localStorage.getItem('basket'))
 
-    const index = trash.products.findIndex(item => item.product.id === product.id && item.color === color);
+    const index = basket.products.findIndex(item => item.product.id === product.id && item.color === color);
     if (index !== -1) {
-        trash.products.splice(index, 1);
-        localStorage.setItem('trash', JSON.stringify(trash))
+        basket.products.splice(index, 1);
+        localStorage.setItem('basket', JSON.stringify(basket))
     }
 }
 
 
-export const addAndDeleteProductInTrash = (product, color, count = 1) => {
-    let trash = JSON.parse(localStorage.getItem('trash'))
-    let trashProduct = {
+export const addAndDeleteProductInbasket = (product, color, count = 1) => {
+    let basket = JSON.parse(localStorage.getItem('basket'))
+    let basketProduct = {
         product: product,
         count: count,
         color: color
     }
 
-    let existItem = trash.products.find(item => item.product.id === product.id && item.color === color);
+    let existItem = basket.products.find(item => item.product.id === product.id && item.color === color);
     if (existItem) {
         existItem.count = count;
 
     } else {
-        trash.products.push(trashProduct)
+        basket.products.push(basketProduct)
     }
-
-    /*
-    if (newTrash.length) {
-        trash.products = trash.products.filter(item => item.product.id !== product.id)
-    } else {
-        trash.products.push(trashProduct)
-    }
-    localStorage.setItem('trash', JSON.stringify(trash))
-
-
-    let newTrash = trash.products.filter(item => item.product.id === product.id)
-    if (newTrash.length) {
-        trash.products = trash.products.filter(item => item.product.id !== product.id)
-    } else {
-        trash.products.push(trashProduct)
-    }
-    */
-    localStorage.setItem('trash', JSON.stringify(trash))
+    localStorage.setItem('basket', JSON.stringify(basket))
 }

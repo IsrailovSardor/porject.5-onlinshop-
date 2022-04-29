@@ -14,7 +14,7 @@ const inistialState = {
     public: [],
     inform: [],
     value: "",
-    trash: [],
+    basket: [],
     favorites: [],
     cart: [],
     nuber: []
@@ -99,11 +99,11 @@ export const productsReducer = (state = inistialState, action) => {
                 ...state,
                 favorites: action.data
             }
-        // TRASH
-        case "GET_TRASH":
+        // basket
+        case "GET_basket":
             return {
                 ...state,
-                trash: action.data
+                basket: action.data
             }
         // PUBLC
         case "ALL_PUBLIC":
@@ -123,12 +123,12 @@ export const productsReducer = (state = inistialState, action) => {
                 ...state,
                 cart: action.data
             }
-// NUMBER
-case "ALL_NUMBER":
-    return {
-        ...state,
-        number: action.data
-    }
+        // NUMBER
+        case "ALL_NUMBER":
+            return {
+                ...state,
+                number: action.data
+            }
         default: return state
     }
 }

@@ -1,26 +1,37 @@
-.basket_container {
+.basket_wrapper {
     width: 100%;
     height: auto;
     padding: 14px 99px;
     background-color: #ECECEC;
 }
 
+.basket_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.inform_sall {
+.basket_information {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.information_card {
+    width: 920px;
+}
+
+.information_price {
     height: 312px;
     width: 384px;
     padding: 24px;
     background-color: white;
+    margin-left: 16px;
 }
 
-.basket_block {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.inform_block_text_p {
+.price_block_title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -30,13 +41,13 @@
     margin-bottom: 16px;
 }
 
-.cartItem_price {
+.price_card {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
 }
 
-.cartItem_price_opa {
+.price_card_title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -45,7 +56,7 @@
     color: #979797;
 }
 
-.cartItem_price_bla {
+.price_card_descr {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -54,13 +65,12 @@
     color: #393939;
 }
 
-.cartItem_price_line {
-    border: 1px dashed #BFBFBF;
+.line_block {
     width: 100%;
-    margin: 24px 0;
+    margin-bottom: 10px;
 }
 
-.cartItem_price_btn {
+.price_card_button {
     width: 100%;
     height: 44px;
     background-color: #E5271B;
@@ -73,17 +83,49 @@
     border: none;
 }
 
-.trach_nune {
+.interesting_container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+.interesting_title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 17px;
-    line-height: 17px;
-    color: #1D1D1B;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin-bottom: 16px;
+}
+
+.interesting_descr {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #393939;
+    margin-bottom: 48px;
+}
+
+.interesting_interest {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #393939;
+    margin-bottom: 16px;
+}
+
+.interesting_block {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* MODAL */
-.modl_trash {
+.modal_basket {
     height: auto;
     max-width: 440px;
     margin: 32px 24px 0px 24px;
@@ -92,7 +134,7 @@
     justify-content: flex-start;
 }
 
-.header_modl {
+.modal_header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -104,20 +146,20 @@
     margin-bottom: 24px;
 }
 
-.header_modl_btn_t {
+.modal_button_close {
     height: 24px;
     width: 24px;
     border: none;
     background-color: white;
 }
 
-.inout_modl {
+.modal_input {
     height: 64px;
     width: 100%;
     margin-bottom: 12px;
 }
 
-.header_modl_desct {
+.modal_basket_descr {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -127,7 +169,7 @@
     margin-bottom: 4px;
 }
 
-.header_modl_input {
+.modal_basket_input {
     padding: 13px 10px 13px 12px;
     width: 100%;
     height: 44px;
@@ -145,7 +187,16 @@
     color: #393939;
 }
 
-.input_chexbox {
+.modal_checkbox {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+
+.modal_basket_checkbox {
     width: 18px;
     height: 18px;
     border: 1.2px solid #919191;
@@ -154,15 +205,16 @@
     margin-right: 11px;
 }
 
-.inout_modl_Chex {
-    display: flex;
-    align-items: center;
-    height: 24px;
-    width: 100%;
-    margin-bottom: 12px;
+.modal_basket_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #393939;
 }
 
-.inout_modl_btn {
+.modal_sall_button {
     height: 44px;
     width: 100%;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), #1D1D1B;
@@ -175,7 +227,7 @@
     border: none;
 }
 
-.inout_modl_btns {
+.modal_sall_buttons {
     height: 44px;
     width: 100%;
     background: #1D1D1B;
@@ -193,44 +245,79 @@
     border-radius: 0 !important;
 }
 
+.modal_complite {
+    width: 328px;
+    height: 264px;
+    text-align: center;
+    margin: auto;
+    margin: 28px 24px;
+}
+
 .mobile_sale {
     display: none;
 }
 
+
+
 /* 1 */
 @media screen and (max-width: 1300px) {
-    .basket_container {
+    .basket_wrapper {
         padding: 14px 99px;
     }
 }
 
 /* 2 */
 @media screen and (max-width: 1100px) {
-    .basket_container {
+    .basket_wrapper {
         padding: 12px 50px;
     }
 }
 
 /* 3 */
 @media screen and (max-width: 900px) {
-    .basket_container {
+    .basket_wrapper {
         padding: 10px 30px;
+    }
+
+    .interesting_block {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
     }
 }
 
 /* 4 */
 @media screen and (max-width: 700px) {
-    .basket_container {
+    .basket_wrapper {
         padding: 8px 16px;
+    }
+
+    .interesting_title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .interesting_descr {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .interesting_interest {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
+/* 5 */
 @media screen and (max-width: 415px) {
-    .basket_container {
+    .basket_wrapper {
         padding: 8px 16px;
     }
 
-    .inform_sall {
+    .information_price {
         display: none;
     }
 
@@ -242,7 +329,7 @@
         padding: 18px 16px;
     }
 
-    .mobile_btn_hide {
+    .mobile_button_hide {
         width: 100%;
         height: 44px;
         background-color: white;

@@ -4,10 +4,10 @@ import IconButton from "@mui/material/IconButton";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useDispatch, useSelector } from "react-redux";
-import { getCart, getFavorites, getTrash } from "../../redux/productact";
+import { getCart, getFavorites, getbasket } from "../../redux/productact";
 import {
   addAndDeleteProductInFavorites,
-  addAndDeleteProductInTrash,
+  addAndDeleteProductInbasket,
   deleteCart,
 } from "../../utils/utilis";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,33 +21,33 @@ import { ReactComponent as Min } from "../../assets/icon/min.svg";
 import { ReactComponent as Clo } from "../../assets/icon/close.svg";
 import { changeCountProduct } from "../../utils/matematika";
 
-const CartTrash = ({ product }) => {
+const Cartbasket = ({ product }) => {
   const dispatch = useDispatch();
 
-  const trash = useSelector((state) => {
+  const basket = useSelector((state) => {
     const { productsReducer } = state;
-    return productsReducer.trash;
+    return productsReducer.basket;
   });
 
   useEffect(() => {
-    dispatch(getTrash());
+    dispatch(getbasket());
   }, []);
 
   const [count, setCount] = useState(product.count);
   useEffect(() => {
-   //changeCountProduct(count, product.product.id)
-    dispatch(getTrash())
-}, [count])
+    //changeCountProduct(count, product.product.id)
+    dispatch(getbasket());
+  }, [count]);
   return (
     <div className="cartItem_block">
       <button
         className="cartItem_block_close"
         onClick={() => {
           deleteCart(product.product, product.color);
-          dispatch(getTrash());
+          dispatch(getbasket());
         }}
       >
-        <Clo className="cartItem_block_close_svg" />
+        <Clo className="close_svg" />
       </button>
       <div className="cartItem_block_img">
         <img src={product.product.img[0]} alt="" />
@@ -59,18 +59,28 @@ const CartTrash = ({ product }) => {
         <div className="cartItem_title2">
           <p className="cartItem_title_size">Размер: {product.product.size}</p>
           <p className="cartItem_title_size">
-            Цвет :{" "}
+            Цвет :
             <div
-              className="renderblock_color_row"
+              className="renderborder"
               style={{
-                marginLeft: 6,
-                background: product.product.color[product.color],
+                marginLeft: 4,
               }}
-            ></div>{" "}
+            >
+              <div
+                className="renderblock_color_row"
+                style={{
+                  background: product.product.color[product.color],
+                }}
+              ></div>
+            </div>
           </p>
           <div className="cartItem_title2_flex">
-            <p className="cartItem_title2_sale1">{product.product.sell} р</p>
-
+            <p className="cartItem_title2_sale1">
+              {product.product.sell} р{" "}
+              <span className="cartItem_title2_sale3">
+                {product.product.discountSale}%
+              </span>
+            </p>
             {product.product.sellNews ? (
               <p className="cartItem_title2_sale2">
                 {product.product.sellNews} р
@@ -82,15 +92,18 @@ const CartTrash = ({ product }) => {
           <button
             className="cartItem_btm_min"
             onClick={() => {
-                if (count <= 1)
-                { 
-                  deleteCart(product.product, product.color);
-                  dispatch(getTrash());
-               } else {
-                  setCount(prev => {
-                      addAndDeleteProductInTrash(product.product, product.color,  prev - 1);
-                      return prev - 1;
-                  });
+              if (count <= 1) {
+                deleteCart(product.product, product.color);
+                dispatch(getbasket());
+              } else {
+                setCount((prev) => {
+                  addAndDeleteProductInbasket(
+                    product.product,
+                    product.color,
+                    prev - 1
+                  );
+                  return prev - 1;
+                });
               }
             }}
           >
@@ -100,11 +113,15 @@ const CartTrash = ({ product }) => {
           <button
             className="cartItem_btm_min"
             onClick={() => {
-              setCount(prev => {
-                  addAndDeleteProductInTrash(product.product, product.color,  prev + 1);
-                  return prev + 1;
+              setCount((prev) => {
+                addAndDeleteProductInbasket(
+                  product.product,
+                  product.color,
+                  prev + 1
+                );
+                return prev + 1;
               });
-          }}
+            }}
           >
             <Pls className="cartItem_btm_min_svg" />
           </button>
@@ -114,4 +131,4 @@ const CartTrash = ({ product }) => {
   );
 };
 
-export default CartTrash;
+export default Cartbasket;

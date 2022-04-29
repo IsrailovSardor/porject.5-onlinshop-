@@ -5,14 +5,16 @@ import "./Scroll.css";
 import massen from "../../assets/icon/chat.svg";
 import up from "../../assets/icon/up.svg";
 import close from "../../assets/icon/close.svg";
-import tel from "../../assets/icon/tel.svg";
+import tel from "../../assets/icon/tell.png";
 import tell from "../../assets/icon/tell.svg";
-import teleg from "../../assets/icon/telegram.svg";
-import wat from "../../assets/icon/wa.svg";
+import teleg from "../../assets/icon/telegram.png";
+import wat from "../../assets/icon/wa.png";
 import user from "../../assets/icon/user.svg";
 import complite from "../../assets/icon/complite.svg";
+import { getProdcutInform } from "../../redux/productact";
 // BOOTSTRAP
 import { Modal } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 
 function MyVerticallyCenteredModal(props) {
   const [complitMode, setCompliteMode] = useState(false);
@@ -20,6 +22,9 @@ function MyVerticallyCenteredModal(props) {
   const [userName, setUserName] = useState("");
   const [number, setNumber] = useState("");
 
+  const handleComliper = () => {
+    setCompliteMode(false);
+  };
   const handleUpdateChat = async (e) => {
     e.preventDefault();
     setUserName(e.target.value);
@@ -40,18 +45,20 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       {complitMode ? (
-        <div className="modalmode_block">
-          <div className="modalmode_title">
-            <img src={complite} alt="" className="modalmode_block_img" />
-            <p className="modalmode_block_text">Спасибо!</p>
-            <p className="modalmode_block_descr">
+        <form className="modalmode_block" onSubmit={handleComliper}>
+          <div className="modal_complite_header">
+            <img src={complite} alt="" className="modal_complite_img" />
+            <p className="modal_complite_title">Спасибо!</p>
+            <p className="modal_complite_descr">
               Ваша заявка была принята ожидайте, скоро Вам перезвонят
             </p>
           </div>
-          <div className="modalmode_btn">
-            <button onClick={props.onHide}>Продолжить покупки</button>
+          <div className="modal_complite_button">
+            <button onClick={props.onHide} type="submit">
+              Продолжить покупки
+            </button>
           </div>
-        </div>
+        </form>
       ) : (
         <div className="modalChat_block">
           <img
@@ -94,8 +101,7 @@ function MyVerticallyCenteredModal(props) {
             </div>
             <button
               type="submit"
-              className="block_input_btns"
-              disabled={!number || !userName}
+              className={number && userName ? "block_input_btnss": "block_input_btns"}
             >
               Заказать звонок
             </button>
@@ -122,6 +128,15 @@ const Scroll = () => {
       behavior: "smooth",
     });
   };
+  // INFORM
+  const dispatch = useDispatch();
+  const inform = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.inform;
+  });
+  useEffect(() => {
+    dispatch(getProdcutInform());
+  }, []);
 
   const [modalShow, setModalShow] = React.useState(false);
   return (
@@ -141,8 +156,13 @@ const Scroll = () => {
         />
       ) : (
         <div className="chat_close">
-          <img src={teleg} alt="" className="chat_link_teleg" />
-          <img src={wat} alt="" className="chat_link_wat" />
+          <a href={inform.inst} target="_blank" className="link">
+            <img src={teleg} alt="" className="chat_link_teleg" />
+          </a>
+
+          <a href={inform.tel} target="_blank" className="link">
+            <img src={wat} alt="" className="chat_link_wat" />
+          </a>
           <img
             src={tel}
             alt=""

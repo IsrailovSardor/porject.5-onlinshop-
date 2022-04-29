@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Collection.css";
 import axios from "axios";
 // COMPONENTS
@@ -31,30 +31,30 @@ const Collection = () => {
   const prevPage = () => setCurrentPage((prev) => prev - 1);
 
   return (
-    <div className="collection_container">
+    <div className="collection_wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="breadcrumb" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">Коллекция</p>
+        <p className="crumbs_link2">Коллекция</p>
       </Breadcrumbs>
       <section className="collection_section">
-        <div className="collection_titles">
-          <p className="collection_title_text">Коллекция</p>
+        <div className="collection_header">
+          <p className="interesting_title">Коллекция</p>
           <Counris countries={correntCounry} />
         </div>
-        <div className="collection_title_btn">
-          <button className="next_btn" onClick={prevPage}>
-            <Left className="rigt_btn_pl" />
+        <div className="collection_pagination">
+          <button className="pagination_next" onClick={prevPage}>
+            <Left className="pagination_svg" />
           </button>
           <Pagin
             paginate={paginate}
             countriesPerPage={countriesPerPage}
             totalCounris={countries.length}
           />
-          <button onClick={nextPage} className="next_btn">
-            <Right className="rigt_btn_pl" />
+          <button onClick={nextPage} className="pagination_next">
+            <Right className="pagination_svg" />
           </button>
         </div>
       </section>

@@ -9,12 +9,12 @@ export function getProdcutBestLimit(page, limit) {
         })
     }
 }
-export function getProdcutBestG ( page, limitq ) {
+export function getProdcutBestG(page, limitq) {
     return async (dispatch) => {
         const { data } = await axios(`http://localhost:3000/products?_page=${page}&_limit=${limitq}`)
-        dispatch({ 
-            type : "ALL_BESTSELLERLIMITG",
-            data  
+        dispatch({
+            type: "ALL_BESTSELLERLIMITG",
+            data
         })
     }
 }
@@ -90,19 +90,19 @@ export function getFavorites() {
         })
     }
 }
-// TRASH
-export function getTrash() {
+// basket
+export function getbasket() {
     return (dispatch) => {
-        let trash = JSON.parse(localStorage.getItem('trash'))
-        if (!trash) {
-            trash = {
+        let basket = JSON.parse(localStorage.getItem('basket'))
+        if (!basket) {
+            basket = {
                 products: []
             }
         }
-        localStorage.setItem('trash', JSON.stringify(trash))
+        localStorage.setItem('basket', JSON.stringify(basket))
         dispatch({
-            type: "GET_TRASH",
-            data: trash.products
+            type: "GET_basket",
+            data: basket.products
         })
     }
 }

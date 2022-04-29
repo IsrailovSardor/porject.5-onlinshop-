@@ -4,7 +4,6 @@ import "./Help.css";
 // COMPONENTS
 import Scroll from "../../components/Scroll/Scroll";
 // MUI
-import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Accordion from "@mui/material/Accordion";
@@ -26,33 +25,33 @@ const Help = () => {
   }, []);
 
   return (
-    <div className="help_container">
+    <div className="wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="breadcrumb" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">Помощь</p>
+        <p className="crumbs_link2">Помощь</p>
       </Breadcrumbs>
-      <div className="help_block">
+      <div className="help_container">
         <div className="help_block_img">
           <img src={help.img} alt="" />
         </div>
         <div className="help_block_info">
-          <p className="help_block_title">Помощь</p>
+          <p className="interesting_title">Помощь</p>
           <div>
             {help.questim
               ? help.questim.map((help) => (
-                  <Accordion>
+                  <Accordion id="accordion">
                     <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
+                      expandIcon={<ExpandMoreIcon fontSize="large" />}
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
-                      <Typography>{help.title}</Typography>
+                      <div className="accord_title">{help.title}</div>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography>{help.text}</Typography>
+                      <div className="accord_text">{help.text}</div>
                     </AccordionDetails>
                   </Accordion>
                 ))

@@ -22,7 +22,9 @@ const CarouselBoot = () => {
         {slid
           ? slid.map((slid, index) => (
               <Carousel.Item interval={1000} key={index}>
-                <img src={slid} alt="First slide" className="carousel_img" />
+                <a href={slid.link} target="_blank">
+                  <img src={slid.img} alt="First slide" className="carousel_img" />
+                </a>
               </Carousel.Item>
             ))
           : null}

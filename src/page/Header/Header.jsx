@@ -57,7 +57,6 @@ const Header = () => {
     dispatch(getProdcutAdvantage());
   }, []);
 
-
   return (
     <div className="home_container">
       <Scroll />

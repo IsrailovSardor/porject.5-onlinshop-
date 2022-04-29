@@ -31,7 +31,7 @@ const Best = ({ product }) => {
   );
 
   return (
-    <div className="colrender_container">
+    <div className="collection_render_card">
       {product.map((product, i) => (
         <div className="block_card">
           <div className="section_img">

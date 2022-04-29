@@ -6,7 +6,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 // COMPONENT
 import Scroll from "../../components/Scroll/Scroll";
-
+import "./Search.css";
 // MUI
 import IconButton from "@mui/material/IconButton";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -65,18 +65,16 @@ const Search = () => {
   }, [limit]);
 
   return (
-    <div>
+    <div className="wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="Breadcrumbs" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">Результаты поиска</p>
+        <p className="crumbs_link2">Результаты поиска</p>
       </Breadcrumbs>
-      <div className="search_constner">
-        <p className="collection_title_text">
-          Результаты поиска по запросу: {value}
-        </p>
+      <div className="collection_section">
+        <p className="saerch_title">Результаты поиска по запросу: {value}</p>
         {value ? (
           <div className="render_container">
             {result.map((product, index) => {
@@ -151,16 +149,14 @@ const Search = () => {
             })}
           </div>
         ) : (
-          <section className="collection_section_newspostres">
-            <p className="collection_sec">
-              По Вашему запросу ничего не найдено.
+          <section className="interesting_container">
+            <p className="search_descr">По Вашему запросу ничего не найдено.</p>
+            <p className="collection_title_textsss">
+              Возможно Вас заинтересует
             </p>
-            <p className="collection_title_text">Возможно Вас заинтересует</p>
-            <div className="collection_title22">
+            <div className="collection_render">
               {news.map((best) => (
-                <div className="mini_card">
-                  <CartNews product={best} key={best.id} />
-                </div>
+                <CartNews product={best} key={best.id} />
               ))}
             </div>
           </section>

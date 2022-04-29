@@ -33,40 +33,41 @@ const Favorites = () => {
   }, [limit]);
 
   return (
-    <div>
+    <div className="wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="Breadcrumbs" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <p className="breadcrumb_links">Избранное</p>
+        <p className="crumbs_link2">Избранное</p>
       </Breadcrumbs>
-      <section className="collection_sectionm">
-        <div className="collection_titlenn">
-          <p className="collection_title_text">Избранное</p>
-          <p className="collection_title_desrcs">
-            Товаров в избранном: {favorites.length}
-          </p>
+      <section className="collection_section">
+        <div className="collection_header">
+          <p className="interesting_title">Избранное</p>
+          {favorites.length ? (
+            <p className="interesting_descr">
+              Товаров в избранном: {favorites.length}
+            </p>
+          ) : (
+            <p className="interesting_descr">
+              У Вас пока нету избранных товаров
+            </p>
+          )}
         </div>
-        <div className="collection_titlen">
+        <div className="collection_render">
           {favorites.length ? (
             favorites.map((item) => (
               <Cart product={item.product} key={item.product.id} />
             ))
           ) : (
-            <section className="collection_section_newsposts">
-              <p className="collection_title_text-error">
-                У Вас пока нету избранных товаров
-              </p>
-              <p className="collection_title_text">Возможно Вас заинтересует</p>
-              <div className="collection_titlesa">
-                {bestseller.map((best) => (
-                  <div className="mini_card">
-                    <CartNews product={best} key={best.id} />
-                  </div>
-                ))}
-              </div>
-            </section>
+            <section className="interesting_container">
+           <p className="collection_title_textsss">Похожие товары</p>
+            <div className="collection_render">
+              {bestseller.map((best) => (
+                  <CartNews product={best} key={best.id} />
+              ))}
+            </div>
+          </section>
           )}
         </div>
       </section>

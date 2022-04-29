@@ -5,17 +5,24 @@ import "./Basket.css";
 import CartTrash from "../../components/Cart/CartTrash";
 import { ReactComponent as Clo } from "../../assets/icon/close.svg";
 import Scroll from "../../components/Scroll/Scroll";
+import complite from "../../assets/icon/complite.svg";
 //MUI
 import Dialog from "@mui/material/Dialog";
 //REDUX
-import { getProdcutNumber, getTrash } from "../../redux/productact";
+import { getProdcutBestLimit, getbasket } from "../../redux/productact";
 import { useDispatch, useSelector } from "react-redux";
 import { matemSell } from "../../utils/matematika";
 import axios from "axios";
-import PhoneInput from "react-phone-number-input";
+import line from "../../assets/icon/Line.png";
+import CartNews from "../../components/Cart/CartNews";
 
 const Basket = () => {
   // modal
+  const [modalMod, setModalMod] = useState(true);
+  const handleCloseModal = () => {
+    setModalMod(true);
+    setOpen(false);
+  };
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -24,26 +31,18 @@ const Basket = () => {
     setOpen(false);
   };
 
-  // trash
+  // Basket
   const dispatch = useDispatch();
-  const trash = useSelector((state) => {
+  const basket = useSelector((state) => {
     const { productsReducer } = state;
-    return productsReducer.trash;
+    return productsReducer.basket;
   });
   useEffect(() => {
-    dispatch(getTrash());
-  }, []);
-  // BESTSELLER
-  const numbers = useSelector((state) => {
-    const { productsReducer } = state;
-    return productsReducer.number;
-  });
-  useEffect(() => {
-    dispatch(getProdcutNumber());
+    dispatch(getbasket());
   }, []);
 
-  const totalSell = matemSell(trash);
-
+  const totalSell = matemSell(basket);
+  // CHECKBOX
   const [btnStatus, setBtnStatus] = useState(true);
   function handleChange(e) {
     const elements = document.getElementsByName("checkbox");
@@ -59,7 +58,7 @@ const Basket = () => {
       setBtnStatus(false);
     }
   }
-
+  // POST
   const [number, setNumber] = useState();
   const [lastName, setLastName] = useState();
   const [firstName, setFirstName] = useState();
@@ -83,7 +82,10 @@ const Basket = () => {
     setEmail("");
     setCountry("");
     setCity("");
+    await setModalMod(false);
+    localStorage.removeItem("basket");
   };
+  // MODE
   const [modalSale, setModalSale] = useState(false);
   const handleHide = () => {
     setModalSale(true);
@@ -91,209 +93,263 @@ const Basket = () => {
   const handleShow = () => {
     setModalSale(false);
   };
+
+  // BESTSELLER
+  const bestseller = useSelector((state) => {
+    const { productsReducer } = state;
+    return productsReducer.bestsellerlimit;
+  });
+  const [limit] = useState(5);
+  useEffect(() => {
+    dispatch(getProdcutBestLimit(1, limit));
+  }, [limit]);
   return (
-    <div className="basket_container">
+    <div className="basket_wrapper">
       <Scroll />
       <Dialog
         open={open}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <form className="modl_trash" onSubmit={handleUpdateSale}>
-          <div className="header_modl">
-            <p className="header_modl_title">Оформление заказа</p>
-            <button className="header_modl_btn_t" onClick={handleClosee}>
-              <Clo className="cartItem_block_close_svg" />
-            </button>
-          </div>
-          <div className="inout_modl">
-            <p className="header_modl_desct">Ваше имя</p>
-            <input
-              type="text"
-              placeholder="Например Иван"
-              className="header_modl_input"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inout_modl">
-            <p className="header_modl_desct">Ваше фамилия</p>
-            <input
-              type="text"
-              placeholder="Например Иванов"
-              className="header_modl_input"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inout_modl">
-            <p className="header_modl_desct">Электронная почта</p>
-            <input
-              type="email"
-              placeholder="example@mail.com"
-              className="header_modl_input"
-              value={email}
-              minLength={5}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inout_modl">
-            <p className="header_modl_desct">Ваш номер телефона</p>
-            <input
-              type="text"
-              pattern="[0-9]*"
-              minLength={10}
-              placeholder="Введите номер телефона"
-              className="header_modl_input"
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inout_modl">
-            <p className="header_modl_desct">Страна</p>
-            <input
-              type="text"
-              placeholder="Введите страну"
-              className="header_modl_input"
-              value={city}
-              minLength={2}
-              onChange={(e) => setCity(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inout_modl">
-            <p className="header_modl_desct">Город</p>
-            <input
-              type="text"
-              placeholder="Введите город"
-              className="header_modl_input"
-              value={country}
-              minLength={2}
-              onChange={(e) => setCountry(e.target.value)}
-              required
-            />
-          </div>
-          <div className="inout_modl_Chex">
-            <input
-              name="checkbox"
-              type="checkbox"
-              onChange={handleChange}
-              className="input_chexbox"
-            />
-            <p className="inout_modl_true">
-              Согласен с условиями <Link to="/public">публичной оферты</Link>
-            </p>
-          </div>
-          <div className="inout_modl">
-            <button
-              className={btnStatus ? "inout_modl_btn" : "inout_modl_btns"}
-              type="submit"
-              disabled={btnStatus}
-            >
-              Заказать
-            </button>
-          </div>
-        </form>
-      </Dialog>
-      <div className="basket_block">
-        <div className="basket_block_ret">
-          <div className="colrender_container">
-            {trash.length ? (
-              trash.map((item) => (
-                <CartTrash product={item} key={item.product.id} />
-              ))
-            ) : (
-              <div>
-                <p className="collection_title_text">Корзина пуста</p>
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="inform_sall">
-          <div className="inform_block_text">
-            <p className="inform_block_text_p">Сумма заказа</p>
-            <div>
-              <div className="cartItem_price">
-                <p className="cartItem_price_opa">Количество линеек:</p>
-                <p className="cartItem_price_bla">{totalSell.totalQty}</p>
-              </div>
-              <div className="cartItem_price">
-                <p className="cartItem_price_opa">Количество товаров:</p>
-                <p className="cartItem_price_bla">{totalSell.modelQty}</p>
-              </div>
-              <div className="cartItem_price">
-                <p className="cartItem_price_opa">Стоимость:</p>
-                <p className="cartItem_price_bla">{totalSell.amount}</p>
-              </div>
-              <div className="cartItem_price">
-                <p className="cartItem_price_opa">Скидка:</p>
-                <p className="cartItem_price_bla">{totalSell.discontAmount}</p>
-              </div>
+        {modalMod ? (
+          <form className="modal_basket" onSubmit={handleUpdateSale}>
+            <div className="modal_header">
+              <p className="modal_header_title">Оформление заказа</p>
+              <button className="modal_button_close" onClick={handleClosee}>
+                <Clo className="close_svg" />
+              </button>
+            </div>
+            <div className="modal_input">
+              <p className="modal_basket_descr">Ваше имя</p>
+              <input
+                type="text"
+                placeholder="Например Иван"
+                className="modal_basket_input"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="modal_input">
+              <p className="modal_basket_descr">Ваше фамилия</p>
+              <input
+                type="text"
+                placeholder="Например Иванов"
+                className="modal_basket_input"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="modal_input">
+              <p className="modal_basket_descr">Электронная почта</p>
+              <input
+                type="email"
+                placeholder="example@mail.com"
+                className="modal_basket_input"
+                value={email}
+                minLength={5}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="modal_input">
+              <p className="modal_basket_descr">Ваш номер телефона</p>
+              <input
+                type="text"
+                pattern="[0-9]*"
+                minLength={10}
+                placeholder="Введите номер телефона"
+                className="modal_basket_input"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                required
+              />
+            </div>
+            <div className="modal_input">
+              <p className="modal_basket_descr">Страна</p>
+              <input
+                type="text"
+                placeholder="Введите страну"
+                className="modal_basket_input"
+                value={city}
+                minLength={2}
+                onChange={(e) => setCity(e.target.value)}
+                required
+              />
+            </div>
+            <div className="modal_input">
+              <p className="modal_basket_descr">Город</p>
+              <input
+                type="text"
+                placeholder="Введите город"
+                className="modal_basket_input"
+                value={country}
+                minLength={2}
+                onChange={(e) => setCountry(e.target.value)}
+                required
+              />
+            </div>
+            <div className="modal_checkbox">
+              <input
+                name="checkbox"
+                type="checkbox"
+                onChange={handleChange}
+                className="modal_basket_checkbox"
+              />
+              <p className="modal_basket_text">
+                Согласен с условиями <Link to="/public">публичной оферты</Link>
+              </p>
+            </div>
+            <div className="modal_input">
+              <button
+                className={
+                  btnStatus ? "modal_sall_button" : "modal_sall_buttons"
+                }
+                type="submit"
+                disabled={btnStatus}
+              >
+                Заказать
+              </button>
+            </div>
+          </form>
+        ) : (
+          <div className="modal_complite">
+            <div className="modal_complite_header">
+              <img src={complite} alt="" className="modal_complite_img" />
+              <p className="modal_complite_title">Спасибо!</p>
+              <p className="modal_complite_descr">
+                Ваша заявка была принята ожидайте, скоро Вам перезвонят
+              </p>
+            </div>
+            <div className="modal_complite_button">
+              <button onClick={handleCloseModal}>Продолжить покупки</button>
             </div>
           </div>
-          <div className="cartItem_price_line">{/*LINE*/}</div>
-          <div className="cartItem_price">
-            <p className="cartItem_price_opa">Итого к оплате:</p>
-            <p className="cartItem_price_bla">{totalSell.totalSum}</p>
-          </div>
-          <div className="cartItem_price_btn">
-            <button
-              className="cartItem_price_btn"
-              onClick={handleClickOpen}
-              disabled={!trash.length}
-            >
-              Оформить заказ
-            </button>
-          </div>
-        </div>
-        <div className="mobile_sale">
-          <div className="inform_block_text">
-            {modalSale ? (
-              <div>
-                <p className="inform_block_text_p">Сумма заказа</p>
-                <div className="cartItem_price">
-                  <p className="cartItem_price_opa">Общее количество:</p>
-                  <p className="cartItem_price_bla">
-                    {totalSell.modelQty}({totalSell.totalQty})
+        )}
+      </Dialog>
+      <div className="basket_container">
+        {basket.length ? (
+          basket.map((item) => (
+            <section className="basket_information">
+              <div className="information_card">
+                <CartTrash product={item} key={item.product.id} />
+              </div>
+              <div className="information_price">
+                <div className="price_block">
+                  <p className="price_block_title">Сумма заказа</p>
+                  <div>
+                    <div className="price_card">
+                      <p className="price_card_title">Количество линеек:</p>
+                      <p className="price_card_descr">
+                        {totalSell.totalQty} шт
+                      </p>
+                    </div>
+                    <div className="price_card">
+                      <p className="price_card_title">Количество товаров:</p>
+                      <p className="price_card_descr">
+                        {totalSell.modelQty} шт
+                      </p>
+                    </div>
+                    <div className="price_card">
+                      <p className="price_card_title">Стоимость:</p>
+                      <p className="price_card_descr">
+                        {totalSell.amount} рублей
+                      </p>
+                    </div>
+                    <div className="price_card">
+                      <p className="price_card_title">Скидка:</p>
+                      <p className="price_card_descr">
+                        {totalSell.discontAmount} рублей
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="line_block">
+                  <img src={line} alt="" />
+                </div>
+                <div className="price_card">
+                  <p className="price_card_title">Итого к оплате:</p>
+                  <p className="price_card_descr">
+                    {totalSell.totalSum} рублей
                   </p>
                 </div>
-                <div className="cartItem_price">
-                  <p className="cartItem_price_opa">Стоимость:</p>
-                  <p className="cartItem_price_bla">{totalSell.amount}</p>
+                <div className="price_card_button">
+                  <button
+                    className="price_card_button"
+                    onClick={handleClickOpen}
+                    disabled={!basket.length}
+                  >
+                    Оформить заказ
+                  </button>
                 </div>
-                <div className="cartItem_price_line">{/*LINE*/}</div>
               </div>
-            ) : null}
-            <div className="cartItem_price">
-              <p className="cartItem_price_opa">Итого к оплате:</p>
-              <p className="cartItem_price_bla">{totalSell.totalSum}</p>
+            </section>
+          ))
+        ) : (
+          <section className="interesting_container">
+            <p className="interesting_title">Корзина</p>
+            <p className="interesting_descr">
+              У Вас пока нет товаров в корзине
+            </p>
+            <p className="interesting_interest">Возможно Вас заинтересует</p>
+            <div className="collection_render">
+              {bestseller.map((best) => (
+                  <CartNews product={best} key={best.id} />
+              ))}
             </div>
-            <div>
+          </section>
+        )}
+        {basket.length ? (
+          <div className="mobile_sale">
+            <div className="price_block">
               {modalSale ? (
-                <button onClick={handleShow} className="mobile_btn_hide">
-                  Скрыть
-                </button>
-              ) : (
-                <button onClick={handleHide} className="mobile_btn_hide">
-                  Информация о заказе
-                </button>
-              )}
+                <div>
+                  <p className="price_block_p">Сумма заказа</p>
+                  <div className="price_card">
+                    <p className="price_card_title">Общее количество:</p>
+                    <p className="price_card_descr">
+                      {totalSell.totalQty} линеек ({totalSell.modelQty} шт.)
+                    </p>
+                  </div>
+                  <div className="price_card">
+                    <p className="price_card_title">Стоимость:</p>
+                    <p className="price_card_descr">
+                      {totalSell.amount} рублей
+                    </p>
+                  </div>
+                  <div className="line_block">
+                    <img src={line} alt="" className="line_block" />
+                  </div>
+                </div>
+              ) : null}
+              <div className="price_card">
+                <p className="price_card_title">Итого к оплате:</p>
+                <p className="price_card_descr">{totalSell.totalSum} рублей</p>
+              </div>
+              <div>
+                {modalSale ? (
+                  <button onClick={handleShow} className="mobile_button_hide">
+                    Скрыть
+                  </button>
+                ) : (
+                  <button onClick={handleHide} className="mobile_button_hide">
+                    Информация о заказе
+                  </button>
+                )}
+              </div>
+            </div>
+            <div className="price_card_button">
+              <button
+                className="price_card_button"
+                onClick={handleClickOpen}
+                disabled={!basket.length}
+              >
+                Оформить заказ
+              </button>
             </div>
           </div>
-          <div className="cartItem_price_btn">
-            <button
-              className="cartItem_price_btn"
-              onClick={handleClickOpen}
-              disabled={!trash.length}
-            >
-              Оформить заказ
-            </button>
-          </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

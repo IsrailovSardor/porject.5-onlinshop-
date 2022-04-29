@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
-import "./CollectionId.css";
+import "./CollectionProducts.css";
 import Scroll from "../../components/Scroll/Scroll";
 import { ReactComponent as Right } from "../../assets/icon/right.svg";
 import { ReactComponent as Left } from "../../assets/icon/left.svg";
@@ -16,7 +16,7 @@ import {
 } from "../../redux/productact";
 import CartNews from "../../components/Cart/CartNews";
 
-const CollectionId = () => {
+const CollectionProducts = () => {
   // PLAGIN
   const [product, setBestseller] = useState([]);
   const [bestsellerPage, setCurrentPage] = useState(1);
@@ -55,41 +55,41 @@ const CollectionId = () => {
   }, [limit]);
 
   return (
-    <div className="collectionId_container">
+    <div className="wrapper">
       <Scroll />
-      <Breadcrumbs aria-label="breadcrumb" className="breadcrumb_block">
-        <Link to="/" className="breadcrumb_link">
+      <Breadcrumbs aria-label="breadcrumb" className="crumbs">
+        <Link to="/" className="crumbs_link1">
           Главная
         </Link>
-        <Link to="/collection" className="breadcrumb_link">
+        <Link to="/collection" className="crumbs_link1">
           Коллекция
         </Link>
-        <p className="breadcrumb_links">{collection.title}</p>
+        <p className="crumbs_link2">{collection.title}</p>
       </Breadcrumbs>
       <section className="collection_section">
-        <div className="collection_title">
-          <p className="collection_title_text">{collection.title}</p>
+        <div className="collection_header">
+          <p className="interesting_title">{collection.title}</p>
         </div>
-        <div className="colrender_container">
+        <div className="collection_render_card">
           <Best product={correntCounry} />
         </div>
-        <div className="collection_title_btn">
-          <button className="next_btn" onClick={prevPage}>
-            <Left className="rigt_btn_pl" />
+        <div className="collection_pagination">
+          <button className="pagination_next" onClick={prevPage}>
+            <Left className="pagination_svg" />
           </button>
           <PaginBest
             paginatee={paginatee}
             bestsellerPerPage={bestsellerPerPage}
             totalCounris={product.length}
           />
-          <button onClick={nextPage} className="next_btn">
-            <Right className="rigt_btn_pl" />
+          <button onClick={nextPage} className="pagination_next">
+            <Right className="pagination_svg" />
           </button>
         </div>
       </section>
-      <section className="collection_section_newspost">
-        <p className="collection_title_textsss">Новинки</p>
-        <div className="collection_titlesa">
+      <section className="collection_section">
+        <p className="interesting_title">Новинки</p>
+        <div className="interesting_block">
           {bestseller.map((best) => (
             <div className="mini_card">
               <CartNews product={best} key={best.id} />
@@ -101,4 +101,4 @@ const CollectionId = () => {
   );
 };
 
-export default CollectionId;
+export default CollectionProducts;

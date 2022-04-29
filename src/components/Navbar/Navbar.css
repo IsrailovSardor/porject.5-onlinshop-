@@ -192,11 +192,11 @@
 }
 
 .header_line {
-    width: 2px;
+    width: 1px;
     height: 24px;
     opacity: 0.6;
-    border: 1px solid #D3D3D3;
     margin: 0 20px;
+    background-color: #D3D3D3;
 }
 
 .nav__menu {
@@ -222,11 +222,20 @@
     display: none;
 }
 
+.mobile_seacrhh {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 650;
+}
+
 
 @media screen and (max-width: 700px) {
     .cart-button {
         display: none;
     }
+
     .nav__menu {
         display: block;
     }
@@ -253,7 +262,7 @@
     .nav__toggler {
         display: block;
         cursor: pointer;
-        
+
     }
 
     .mobile_logo {
@@ -387,6 +396,7 @@
 .toggle .line3 {
     transform: rotate(50deg) translate(-6px, -5px);
 }
+
 /* 1 */
 @media screen and (max-width: 1300px) {
     .header_container {

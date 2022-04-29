@@ -6,10 +6,13 @@ const PaginBest = ({ bestsellerPerPage, totalCounris, paginatee }) => {
     pageNumbere.push(i);
   }
   return (
-    <div className="btn_plag">
+    <div className="button_pagination">
       {pageNumbere.map((nubmer) => (
-        <div key={nubmer} className="btn_block">
-          <button onClick={() => paginatee(nubmer)} className="btn_block_plaf">
+        <div key={nubmer} className="button_pagination_block">
+          <button
+            onClick={() => paginatee(nubmer)}
+            className="button_pagination_render"
+          >
             {nubmer}
           </button>
         </div>
