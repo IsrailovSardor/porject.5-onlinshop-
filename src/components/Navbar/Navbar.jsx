@@ -13,6 +13,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProdcutInform } from "../../redux/productact";
 import SearchMobile from "../Search/SearchMobile";
 
+import { signOut, onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firbase-config";
 const Navbar = ({ itemsCount }) => {
   // basket
   const basket = useSelector((state) => {
@@ -54,6 +56,14 @@ const Navbar = ({ itemsCount }) => {
   const handleMobileSearchShow = () => {
     setMobileSearch(true);
   };
+  // AUTH
+  const [user, setUser] = useState({});
+  const logout = async () => {
+    await signOut(auth);
+  };
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
   return (
     <div className="header_container">
       {/* MOBILE */}
@@ -141,6 +151,17 @@ const Navbar = ({ itemsCount }) => {
           <Link to="/news" className="header_links_text">
             Новости
           </Link>
+          {user ? (
+            <Link to="/Login" className="header_links_text">
+              {user?.email}
+              <button onClick={logout}> Выйти </button>
+            </Link>
+          ) : (
+            <Link to="/Login" className="header_links_text">
+              {user?.email}
+              <button onClick={logout}> Войти </button>
+            </Link>
+          )}
         </div>
         <div className="header_tell">
           <p className="tell_number">

@@ -15,6 +15,7 @@ import Search from './page/Search/Search'
 import CollectionProducts from './page/CollectionProducts/CollectionProducts';
 import { useEffect } from 'react';
 import Register from './page/Register/Register';
+import Login from './page/Register/Login';
 function App() {
 
   const location = useLocation();
@@ -22,7 +23,7 @@ function App() {
     window.scrollTo(0, 0)
   
   }, [location.pathname]);
-  
+    
   return (
     <div className="App">
       <Navbar />
@@ -39,6 +40,7 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/search" element={<Search />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </div>

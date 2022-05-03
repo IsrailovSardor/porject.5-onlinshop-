@@ -1,66 +1,70 @@
 import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firbase-config";
 import "./Register.css";
 import { Link } from "react-router-dom";
-function Register() {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
+function Login() {
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
 
-  const register = async () => {
+  const login = async () => {
     try {
-      const user = await createUserWithEmailAndPassword(
+      const user = await signInWithEmailAndPassword(
         auth,
-        registerEmail,
-        registerPassword
+        loginEmail,
+        loginPassword
       );
       console.log(user);
     } catch (error) {
       console.log(error.message);
     }
-    setRegisterEmail("");
-    setRegisterPassword("");
+    setLoginPassword("");
+    setLoginEmail("");
   };
 
   return (
     <div className="login_wrapper">
       <div className="register_container">
-        <p className="interesting_title"> Зарегистрироваться</p>
+        <p className="interesting_title"> Логин </p>
         <input
+          name="text"
+          type="text"
           placeholder="Email..."
-          value={registerEmail}
           onChange={(event) => {
-            setRegisterEmail(event.target.value);
+            setLoginEmail(event.target.value);
           }}
+          value={loginEmail}
           className="modal_basket_input"
         />
         <br />
         <input
+          name="text"
+          type="text"
           placeholder="Password..."
-          value={registerPassword}
           onChange={(event) => {
-            setRegisterPassword(event.target.value);
+            setLoginPassword(event.target.value);
           }}
+          value={loginPassword}
           className="modal_basket_input"
         />
         <br />
         <button
-          onClick={register}
+          onClick={login}
           className={
-            registerPassword && registerEmail
+            loginPassword && loginEmail
               ? "block_input_btnss"
               : "block_input_btns"
           }
         >
-          Зарегистрироваться
+          Войти
         </button>
         <br />
-        <Link to="/login" className="login_mode">
-          Уже зарегистрированы? Войти
+        <Link to="/register" className="login_mode">
+          Еще не зарегистрированы ? Регистрация
         </Link>
       </div>
     </div>
   );
 }
 
-export default Register;
+export default Login;

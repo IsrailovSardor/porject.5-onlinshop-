@@ -32,7 +32,7 @@ const Cart = ({ product }) => {
   );
 
   return (
-    <div className="block_card">
+    <div className="block_card" >
       <div className="section_img">
         {product.discount ? (
           <div className="block_dicount">
